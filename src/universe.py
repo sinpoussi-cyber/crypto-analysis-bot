@@ -1,80 +1,69 @@
 """
 Construction de l'UNIVERS de cryptos a analyser.
 
-Deux modes (config.yaml -> section `universe`) :
-  - mode: list   -> on utilise la liste explicite `cryptos` du config.
-  - mode: top_n  -> on recupere dynamiquement les N premieres cryptos par
-                    capitalisation (CoinGecko /coins/markets), puis on les mappe
-                    aux paires USDT reellement negociables sur Binance
-                    (exchangeInfo). Celles absentes de Binance gardent CoinGecko
-                    en secours. Le filtre fondamental (liquidite/capitalisation)
-                    ecarte ensuite les actifs trop fragiles.
+Sur GitHub Actions, Binance est geo-bloque (451) : par defaut on N'appelle PAS
+exchangeInfo et on met binance=None (data_sources ira direct sur CoinGecko).
 
-"Toutes les cryptos" en pratique = l'univers liquide et negociable des top-N,
-rafraichi automatiquement. Analyser des milliers de micro-jetons illiquides
-serait couteux et sans valeur (ils echouent au filtre de qualite).
+Optimisation cle : l'appel /coins/markets renvoie DEJA capitalisation, volume,
+rang, offres et ATH. On stocke ces champs par crypto (`market`) pour que
+l'analyse fondamentale n'ait AUCUN appel supplementaire a faire (ce qui evitait
+les 401/429 du job quotidien).
+
+Retour : {nom: {binance, coingecko_id, market}}.
 """
 from __future__ import annotations
-import time
-
 import requests
+
+from src.cg import cg_get
 
 HEADERS = {"User-Agent": "crypto-analysis-bot/1.0"}
 BINANCE_INFO = "https://api.binance.com/api/v3/exchangeInfo"
-CG_MARKETS = "https://api.coingecko.com/api/v3/coins/markets"
+
+STABLES = {"tether", "usd-coin", "dai", "first-digital-usd", "true-usd",
+           "paypal-usd", "usdd", "frax", "ethena-usde", "binance-usd",
+           "usds", "global-dollar", "usd1-wlfi", "paypal-usd"}
 
 
 def binance_usdt_symbols() -> set[str]:
-    """Ensemble des paires <BASE>USDT en statut TRADING sur Binance."""
     try:
         r = requests.get(BINANCE_INFO, headers=HEADERS, timeout=30)
         r.raise_for_status()
-        syms = set()
-        for s in r.json().get("symbols", []):
-            if s.get("quoteAsset") == "USDT" and s.get("status") == "TRADING":
-                syms.add(s["symbol"])
-        return syms
+        return {s["symbol"] for s in r.json().get("symbols", [])
+                if s.get("quoteAsset") == "USDT" and s.get("status") == "TRADING"}
     except Exception as e:  # noqa: BLE001
         print(f"[WARN] exchangeInfo Binance indisponible ({e}); mapping USDT desactive.")
         return set()
 
 
 def top_markets(n: int) -> list[dict]:
-    """Top n cryptos par capitalisation (CoinGecko). Exclut les stablecoins."""
+    """Top n cryptos par capitalisation (un seul appel /coins/markets, jusqu'a 250)."""
     out, page = [], 1
-    per = 250
     while len(out) < n:
-        params = {"vs_currency": "usd", "order": "market_cap_desc",
-                  "per_page": min(per, 250), "page": page, "sparkline": "false"}
-        r = requests.get(CG_MARKETS, params=params, headers=HEADERS, timeout=30)
-        r.raise_for_status()
-        batch = r.json()
+        batch = cg_get("/coins/markets", {
+            "vs_currency": "usd", "order": "market_cap_desc",
+            "per_page": min(250, n + 20), "page": page, "sparkline": "false"})
         if not batch:
             break
         out.extend(batch)
         page += 1
-        if len(batch) < per:
+        if len(batch) < 250:
             break
-        time.sleep(1.0)   # respect des limites de debit
-    return out[:n]
-
-
-# Stablecoins a exclure (aucun interet pour une strategie directionnelle)
-STABLES = {"tether", "usd-coin", "dai", "first-digital-usd", "true-usd",
-           "paypal-usd", "usdd", "frax", "ethena-usde", "binance-usd"}
+    return out[:n + 20]
 
 
 def build_universe(cfg: dict) -> dict:
-    """Renvoie {nom: {binance: str|None, coingecko_id: str}}."""
     u = cfg.get("universe", {}) or {}
     mode = u.get("mode", "list")
-    if mode == "list":
-        return dict(cfg["cryptos"])
+    use_binance = bool(cfg.get("use_binance", False))
 
-    n = int(u.get("top_n", 30))
+    if mode == "list":
+        # liste explicite : pas de donnees marche pre-chargees (fondamentale via API si besoin)
+        return {k: dict(v, market=None) for k, v in cfg["cryptos"].items()}
+
+    n = int(u.get("top_n", 20))
     exclude_stables = u.get("exclude_stablecoins", True)
-    markets = top_markets(n + 15)   # marge pour compenser les stablecoins ecartes
-    usdt = binance_usdt_symbols()
+    markets = top_markets(n)
+    usdt = binance_usdt_symbols() if use_binance else set()
 
     universe, seen = {}, set()
     for m in markets:
@@ -82,16 +71,24 @@ def build_universe(cfg: dict) -> dict:
         if exclude_stables and cg_id in STABLES:
             continue
         sym = (m.get("symbol") or "").upper()
-        if not sym or sym in seen:
+        if not sym or sym in seen or not cg_id:
             continue
-        cand = f"{sym}USDT"
-        binance = cand if (not usdt or cand in usdt) else None
-        # si Binance connu mais paire absente ET pas d'id CoinGecko -> on saute
-        if binance is None and not cg_id:
-            continue
-        universe[sym] = {"binance": binance, "coingecko_id": cg_id}
+        binance = None
+        if use_binance:
+            cand = f"{sym}USDT"
+            binance = cand if (not usdt or cand in usdt) else None
+        # donnees fondamentales pre-chargees (evite un appel /coins/{id} par crypto)
+        market = {
+            "market_cap": m.get("market_cap"), "rank": m.get("market_cap_rank"),
+            "volume": m.get("total_volume"),
+            "circ": m.get("circulating_supply"), "total": m.get("total_supply"),
+            "maxs": m.get("max_supply"), "ath_change_pct": m.get("ath_change_percentage"),
+        }
+        market["vol_mcap"] = ((market["volume"] / market["market_cap"])
+                              if (market["market_cap"] and market["volume"]) else None)
+        universe[sym] = {"binance": binance, "coingecko_id": cg_id, "market": market}
         seen.add(sym)
         if len(universe) >= n:
             break
-    print(f"Univers construit : {len(universe)} cryptos (mode top_{n}).")
+    print(f"Univers construit : {len(universe)} cryptos (mode top_{n}, Binance={'oui' if use_binance else 'non'}).")
     return universe
