@@ -1,0 +1,37 @@
+# --- UNIVERS de cryptos analysees ---
+# mode: list  -> utilise la liste `cryptos` ci-dessous.
+# mode: top_n -> recupere dynamiquement les N premieres par capitalisation
+#                (CoinGecko), mappees aux paires USDT negociables sur Binance.
+universe:
+  mode: top_n              # "list" ou "top_n"
+  top_n: 30                # nombre de cryptos si mode top_n (30 = raisonnable en CI ; augmentable)
+  exclude_stablecoins: true
+
+# Liste explicite (utilisee si universe.mode == list, et pour tes 6 cryptos de depart).
+cryptos:
+  BTC:  { binance: BTCUSDT,  coingecko_id: bitcoin }
+  ETH:  { binance: ETHUSDT,  coingecko_id: ethereum }
+  SOL:  { binance: SOLUSDT,  coingecko_id: solana }
+  TRX:  { binance: TRXUSDT,  coingecko_id: tron }
+  LINK: { binance: LINKUSDT, coingecko_id: chainlink }
+  GRAM: { binance: null,     coingecko_id: the-open-network }
+
+history_days: 800          # profondeur recuperee (assez pour l'optimisation walk-forward)
+vol_window: 180            # fenetre volatilite pour la projection
+
+# --- Optimisation walk-forward (reentrainement hebdomadaire) ---
+train_window: 365          # fenetre d'entrainement (jours)
+valid_window: 90           # fenetre de validation hors-echantillon (jours)
+cost: 0.001                # frais par changement de position (0,1%)
+predict_horizon: 5         # horizon (jours) de la cible du modele de prediction
+
+# --- Seuils de la strategie ---
+signal:
+  buy_threshold: 0.35      # entree (score composite)
+  sell_threshold: -0.10    # sortie (hysteresis)
+
+# --- Canaux d'envoi ---
+notify:
+  telegram: true
+  email: false
+  commit_report: true
