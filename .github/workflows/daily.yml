@@ -1,53 +1,41 @@
-name: Note crypto quotidienne
+# --- UNIVERS de cryptos analysees ---
+# mode: list  -> utilise la liste `cryptos` ci-dessous.
+# mode: top_n -> recupere dynamiquement les N premieres par capitalisation
+#                (CoinGecko), mappees aux paires USDT negociables sur Binance.
+universe:
+  mode: top_n              # "list" ou "top_n"
+  top_n: 20                # 20 = sur pour les limites de debit CoinGecko (augmentable avec une cle)
+  exclude_stablecoins: true
 
-# Se declenche tous les jours a 06:00 UTC (06:00 a Abidjan, UTC+0)
-# et manuellement via l'onglet Actions ("Run workflow").
-on:
-  schedule:
-    - cron: "0 6 * * *"
-  workflow_dispatch:
+# Binance est geo-bloque (HTTP 451) sur GitHub Actions -> on passe direct par CoinGecko.
+# Mettre true seulement en local, dans une region ou Binance n'est pas bloque.
+use_binance: false
 
-permissions:
-  contents: write        # pour committer le rapport du jour dans reports/
+# Liste explicite (utilisee si universe.mode == list, et pour tes 6 cryptos de depart).
+cryptos:
+  BTC:  { binance: BTCUSDT,  coingecko_id: bitcoin }
+  ETH:  { binance: ETHUSDT,  coingecko_id: ethereum }
+  SOL:  { binance: SOLUSDT,  coingecko_id: solana }
+  TRX:  { binance: TRXUSDT,  coingecko_id: tron }
+  LINK: { binance: LINKUSDT, coingecko_id: chainlink }
+  GRAM: { binance: null,     coingecko_id: the-open-network }
 
-jobs:
-  analyse:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Recuperer le depot
-        uses: actions/checkout@v4
+history_days: 800          # profondeur recuperee (assez pour l'optimisation walk-forward)
+vol_window: 180            # fenetre volatilite pour la projection
 
-      - name: Installer Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
+# --- Optimisation walk-forward (reentrainement hebdomadaire) ---
+train_window: 365          # fenetre d'entrainement (jours)
+valid_window: 90           # fenetre de validation hors-echantillon (jours)
+cost: 0.001                # frais par changement de position (0,1%)
+predict_horizon: 5         # horizon (jours) de la cible du modele de prediction
 
-      - name: Installer les dependances
-        run: pip install -r requirements.txt
+# --- Seuils de la strategie ---
+signal:
+  buy_threshold: 0.35      # entree (score composite)
+  sell_threshold: -0.10    # sortie (hysteresis)
 
-      - name: Lancer l'analyse et l'envoi
-        env:
-          # Cascade IA : DeepSeek -> Kimi -> Claude
-          AI_PROVIDER_ORDER:  ${{ secrets.AI_PROVIDER_ORDER }}
-          DEEPSEEK_API_KEY:   ${{ secrets.DEEPSEEK_API_KEY }}
-          DEEPSEEK_MODEL:     ${{ secrets.DEEPSEEK_MODEL }}
-          KIMI_API_KEY:       ${{ secrets.KIMI_API_KEY }}
-          KIMI_MODEL:         ${{ secrets.KIMI_MODEL }}
-          ANTHROPIC_API_KEY:  ${{ secrets.ANTHROPIC_API_KEY }}
-          ANTHROPIC_MODEL:    ${{ secrets.ANTHROPIC_MODEL }}
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
-          SMTP_HOST:          ${{ secrets.SMTP_HOST }}
-          SMTP_PORT:          ${{ secrets.SMTP_PORT }}
-          SMTP_USER:          ${{ secrets.SMTP_USER }}
-          SMTP_PASSWORD:      ${{ secrets.SMTP_PASSWORD }}
-          EMAIL_TO:           ${{ secrets.EMAIL_TO }}
-        run: python -m src.main
-
-      - name: Archiver le rapport du jour
-        run: |
-          git config user.name  "crypto-bot"
-          git config user.email "bot@users.noreply.github.com"
-          git add reports/ || true
-          git commit -m "Note du $(date -u +%Y-%m-%d)" || echo "Rien a committer"
-          git push || echo "Push ignore"
+# --- Canaux d'envoi ---
+notify:
+  telegram: false         # Telegram desactive
+  email: true             # envoi par e-mail uniquement
+  commit_report: true
