@@ -1,0 +1,33 @@
+name: Reentrainement hebdomadaire
+
+# Chaque dimanche a 05:00 UTC : re-optimise les parametres, remplace les
+# indicateurs defaillants, re-mesure le modele, met a jour state/params_state.json.
+on:
+  schedule:
+    - cron: "0 5 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  retrain:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Reentrainer
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python -m src.retrain
+      - name: Committer l'etat et le rapport
+        run: |
+          git config user.name  "crypto-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add state/ reports/ || true
+          git commit -m "Reentrainement du $(date -u +%Y-%m-%d)" || echo "Rien a committer"
+          git push || echo "Push ignore"
