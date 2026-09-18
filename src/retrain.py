@@ -28,13 +28,14 @@ def main():
     today = dt.date.today().isoformat()
     days = cfg.get("history_days", 800)
     new_state = state.load()
+    use_binance = bool(cfg.get("use_binance", False))
     cryptos = universe.build_universe(cfg)
 
     lines = [f"# Reentrainement hebdomadaire — {today}",
              f"Univers : {len(cryptos)} cryptos.", ""]
     for name, meta in cryptos.items():
         try:
-            df = data_sources.fetch(name, meta, days)
+            df = data_sources.fetch(name, meta, days, use_binance=use_binance)
         except Exception as e:  # noqa: BLE001
             lines.append(f"## {name} — ECHEC recuperation : {e}")
             continue
