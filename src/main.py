@@ -35,7 +35,15 @@ def build_payload(cfg: dict) -> dict:
     thr = cfg["signal"]
     st = ST.load()
     use_binance = bool(cfg.get("use_binance", False))
-    cryptos = universe.build_universe(cfg)
+    try:
+        cryptos = universe.build_universe(cfg)
+    except Exception as e:  # noqa: BLE001
+        print("\n==================== DIAGNOSTIC ====================")
+        print("Impossible de construire l'univers (appel CoinGecko).")
+        print("Cause : " + str(e))
+        print("Verifie le secret COINGECKO_API_KEY (nom exact, valeur CG-...).")
+        print("===================================================\n")
+        return dict(date=today, cryptos=[])
 
     out = []
     for name, meta in cryptos.items():
@@ -103,7 +111,12 @@ def main():
     print("Analyse quotidienne (parametres optimises)...")
     payload = build_payload(cfg)
     if not payload["cryptos"]:
-        print("[ERREUR] aucune crypto analysee."); sys.exit(1)
+        print("\n==================== DIAGNOSTIC ====================")
+        print("Aucune crypto analysee : la source de donnees a echoue pour toutes.")
+        print("Cause la plus frequente : COINGECKO_API_KEY manquante/incorrecte,")
+        print("ou quota CoinGecko depasse (429). Regarde les lignes [ERREUR]/[CG] ci-dessus.")
+        print("===================================================\n")
+        sys.exit(1)
 
     note = ai_note.write_note(payload)
     full = f"*Note crypto quotidienne — {payload['date']}*\n" + summary_table(payload) + "\n\n" + note
