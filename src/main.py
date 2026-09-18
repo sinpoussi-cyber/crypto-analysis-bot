@@ -34,12 +34,13 @@ def build_payload(cfg: dict) -> dict:
     vol_window = cfg.get("vol_window", 180)
     thr = cfg["signal"]
     st = ST.load()
+    use_binance = bool(cfg.get("use_binance", False))
     cryptos = universe.build_universe(cfg)
 
     out = []
     for name, meta in cryptos.items():
         try:
-            df = data_sources.fetch(name, meta, days)
+            df = data_sources.fetch(name, meta, days, use_binance=use_binance)
         except Exception as e:  # noqa: BLE001
             print(f"[ERREUR] {name}: {e}. Ignoree.")
             continue
@@ -56,9 +57,9 @@ def build_payload(cfg: dict) -> dict:
         tech_edge = bool(tuned.get("composite_valid", {}).get("beats_bh", False)
                          or (tuned.get("composite_valid", {}).get("sharpe") or 0) > 0.5)
 
-        # fondamentale
-        fund = fundamental.analyze(meta.get("coingecko_id")) if meta.get("coingecko_id") else \
-            dict(available=False, score=None, passes=True, reasons=["pas d'id CoinGecko"])
+        # fondamentale : utilise les donnees marche pre-chargees par l'univers
+        # (aucun appel API supplementaire -> evite les 401/429)
+        fund = fundamental.analyze(meta.get("coingecko_id"), market=meta.get("market"))
 
         # prediction : soit re-mesuree ici, soit lue depuis l'etat hebdo
         mstate = tuned.get("model") or {}
