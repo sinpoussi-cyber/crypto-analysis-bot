@@ -32,6 +32,6 @@ signal:
 
 # --- Canaux d'envoi ---
 notify:
-  telegram: true
-  email: false
+  telegram: false         # Telegram desactive
+  email: true             # envoi par e-mail uniquement
   commit_report: true
