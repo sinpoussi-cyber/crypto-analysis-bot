@@ -30,9 +30,20 @@ Récupération des cours (**Binance**, avec **CoinGecko** en secours pour GRAM q
 n'est pas sur Binance) → **analyse technique réelle** (RSI, MACD, moyennes mobiles
 20/50/200, Bollinger, ATR, volatilité, drawdown, momentum) → **signal mécanique et
 transparent ACHAT / CONSERVATION / VENTE** (chaque règle visible) → **projection 30
-jours en intervalle** → **rédaction de la note par l'API Claude** → **envoi
-Telegram/email et archivage dans `reports/`**. Le workflow GitHub Actions tourne à
-**06:00 UTC (soit 06:00 à Abidjan, UTC+0)** et se déclenche aussi à la main.
+jours en intervalle** → **rédaction de la note par l'IA (cascade DeepSeek → Kimi →
+Claude)** → **envoi Telegram/email et archivage dans `reports/`**. Le workflow
+GitHub Actions tourne à **06:00 UTC (soit 06:00 à Abidjan, UTC+0)** et se déclenche
+aussi à la main.
+
+### Choix du fournisseur IA (cascade)
+
+La note est rédigée par le premier fournisseur disponible, dans cet ordre :
+**DeepSeek → Kimi (Moonshot) → Claude (Anthropic)**, puis une note déterministe
+sans IA si tous échouent (clé absente, quota, erreur réseau). DeepSeek et Kimi
+utilisent l'API compatible OpenAI, Claude le SDK Anthropic. L'ordre est
+modifiable via le secret `AI_PROVIDER_ORDER` (ex. `kimi,claude,deepseek`). Quel
+que soit le fournisseur, le même prompt système s'applique : l'IA **rédige** les
+chiffres calculés par le code, elle n'invente ni prix ni prédiction.
 
 La note porte **deux couches complémentaires** :
 1. le **signal technique transparent** (ACHAT / CONSERVATION / VENTE) — ce que
@@ -120,10 +131,15 @@ reports/                       notes et rapports de réentraînement archivés
 ## Installation
 
 1. Pousser le dossier sur un dépôt GitHub.
-2. Récupérer : **clé API Claude** (console.anthropic.com), **bot Telegram**
+2. Récupérer : **clé API DeepSeek** (platform.deepseek.com — prioritaire),
+   éventuellement **Kimi/Moonshot** (platform.moonshot.ai) et **Claude**
+   (console.anthropic.com) comme replis, et un **bot Telegram**
    (@BotFather → token ; `getUpdates` → chat_id).
-3. **Settings → Secrets and variables → Actions** : ajouter `ANTHROPIC_API_KEY`,
-   `ANTHROPIC_MODEL`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID` (et `SMTP_*` pour l'email).
+3. **Settings → Secrets and variables → Actions** : ajouter au minimum
+   `DEEPSEEK_API_KEY`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`. Optionnels :
+   `KIMI_API_KEY`, `ANTHROPIC_API_KEY`, `AI_PROVIDER_ORDER`, les `*_MODEL`, et
+   les `SMTP_*` pour l'email. Un seul fournisseur IA suffit à faire tourner le
+   système ; les autres ne servent que de repli.
 4. **Actions → Reentrainement hebdomadaire → Run workflow** une première fois pour
    générer `state/params_state.json`, puis **Note crypto quotidienne → Run workflow**.
    Ensuite tout tourne seul (dimanche = réentraînement, chaque jour = note).
