@@ -20,12 +20,12 @@ cryptos:
   LINK: { binance: LINKUSDT, coingecko_id: chainlink }
   GRAM: { binance: null,     coingecko_id: the-open-network }
 
-history_days: 800          # profondeur recuperee (assez pour l'optimisation walk-forward)
+history_days: 360          # plan Demo CoinGecko : 365 j max (borne aussi cote code)
 vol_window: 180            # fenetre volatilite pour la projection
 
 # --- Optimisation walk-forward (reentrainement hebdomadaire) ---
-train_window: 365          # fenetre d'entrainement (jours)
-valid_window: 90           # fenetre de validation hors-echantillon (jours)
+train_window: 210          # fenetre d'entrainement (jours) — compatible plafond 365 j
+valid_window: 60           # fenetre de validation hors-echantillon (jours)
 cost: 0.001                # frais par changement de position (0,1%)
 predict_horizon: 5         # horizon (jours) de la cible du modele de prediction
 
