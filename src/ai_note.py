@@ -1,16 +1,23 @@
 """
-Redaction de la note quotidienne par l'IA (API Claude / Anthropic).
+Redaction de la note quotidienne par l'IA — CASCADE MULTI-FOURNISSEURS.
 
-Principe de conception (important) :
-- L'IA NE CALCULE RIEN et NE PREDIT RIEN. Tous les chiffres (indicateurs,
-  signal, intervalle de projection) sont calcules par le code Python en amont.
-- L'IA recoit ces chiffres deja calcules et se contente de les REDIGER en
-  francais, clairement, pour un lecteur humain.
-- Le prompt systeme lui interdit explicitement d'inventer un prix futur ou
-  d'affirmer une direction. Elle explique ce que disent les indicateurs
-  AUJOURD'HUI, jamais ce qui va arriver demain.
+Ordre de priorite (repli automatique si l'un echoue : cle absente, quota, erreur
+reseau, reponse vide) :
+    1. DeepSeek   (API compatible OpenAI)
+    2. Kimi/Moonshot (API compatible OpenAI)
+    3. Claude/Anthropic (SDK anthropic)
+    4. Note deterministe de secours (aucune IA)
 
-Si la cle API est absente, une note deterministe de secours est generee sans IA.
+Principe de conception (inchange) :
+- L'IA NE CALCULE RIEN et NE PREDIT RIEN. Tous les chiffres sont calcules par le
+  code Python en amont ; l'IA se contente de REDIGER en francais.
+- Le prompt systeme interdit d'inventer un prix futur ou d'affirmer une direction.
+
+Cles et modeles (variables d'environnement / secrets GitHub) :
+    DEEPSEEK_API_KEY   + DEEPSEEK_MODEL   (defaut: deepseek-chat)
+    KIMI_API_KEY       + KIMI_MODEL       (defaut: kimi-k2-0711-preview)   [alias MOONSHOT_API_KEY]
+    ANTHROPIC_API_KEY  + ANTHROPIC_MODEL  (defaut: claude-sonnet-4-5)
+    AI_PROVIDER_ORDER  (optionnel, defaut: "deepseek,kimi,claude")
 """
 from __future__ import annotations
 import json
@@ -47,9 +54,97 @@ REGLES ABSOLUES :
 Style : concis, factuel, structure. ~120-180 mots par crypto."""
 
 
+def _user_msg(payload: dict) -> str:
+    return (
+        "Voici les donnees calculees pour aujourd'hui (JSON). Redige la note "
+        "quotidienne en respectant strictement tes regles. Pour chaque crypto : "
+        "un titre avec le signal technique et la decision, un paragraphe "
+        "interpretant les indicateurs et le profil de risque fournis, puis la "
+        "fourchette de projection presentee comme une mesure d'incertitude. "
+        "Termine par un rappel de risque global.\n\n"
+        + json.dumps(payload, ensure_ascii=False, indent=2)
+    )
+
+
+# ---------------------------------------------------------------------------
+# Fournisseurs. Chacun renvoie le texte, ou leve une exception -> repli suivant.
+# ---------------------------------------------------------------------------
+def _call_openai_compatible(base_url: str, api_key: str, model: str, payload: dict) -> str:
+    """DeepSeek et Kimi exposent une API compatible OpenAI (meme client)."""
+    from openai import OpenAI
+    client = OpenAI(api_key=api_key, base_url=base_url)
+    resp = client.chat.completions.create(
+        model=model, temperature=0.3, max_tokens=2500,
+        messages=[{"role": "system", "content": SYSTEM},
+                  {"role": "user", "content": _user_msg(payload)}],
+    )
+    txt = (resp.choices[0].message.content or "").strip()
+    if not txt:
+        raise RuntimeError("reponse vide")
+    return txt
+
+
+def _provider_deepseek(payload: dict) -> str:
+    key = os.environ.get("DEEPSEEK_API_KEY")
+    if not key:
+        raise RuntimeError("DEEPSEEK_API_KEY absente")
+    model = os.environ.get("DEEPSEEK_MODEL", "deepseek-chat")
+    base = os.environ.get("DEEPSEEK_BASE_URL", "https://api.deepseek.com")
+    return _call_openai_compatible(base, key, model, payload)
+
+
+def _provider_kimi(payload: dict) -> str:
+    key = os.environ.get("KIMI_API_KEY") or os.environ.get("MOONSHOT_API_KEY")
+    if not key:
+        raise RuntimeError("KIMI_API_KEY / MOONSHOT_API_KEY absente")
+    model = os.environ.get("KIMI_MODEL", "kimi-k2-0711-preview")
+    base = os.environ.get("KIMI_BASE_URL", "https://api.moonshot.ai/v1")
+    return _call_openai_compatible(base, key, model, payload)
+
+
+def _provider_claude(payload: dict) -> str:
+    key = os.environ.get("ANTHROPIC_API_KEY")
+    if not key:
+        raise RuntimeError("ANTHROPIC_API_KEY absente")
+    import anthropic
+    model = os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-4-5")
+    client = anthropic.Anthropic(api_key=key)
+    resp = client.messages.create(
+        model=model, max_tokens=2500, system=SYSTEM,
+        messages=[{"role": "user", "content": _user_msg(payload)}],
+    )
+    txt = (resp.content[0].text or "").strip()
+    if not txt:
+        raise RuntimeError("reponse vide")
+    return txt
+
+
+PROVIDERS = {"deepseek": _provider_deepseek, "kimi": _provider_kimi, "claude": _provider_claude}
+LABELS = {"deepseek": "DeepSeek", "kimi": "Kimi (Moonshot)", "claude": "Claude (Anthropic)"}
+
+
+def write_note(payload: dict) -> str:
+    order = [p.strip().lower() for p in
+             os.environ.get("AI_PROVIDER_ORDER", "deepseek,kimi,claude").split(",") if p.strip()]
+    for name in order:
+        fn = PROVIDERS.get(name)
+        if not fn:
+            print(f"[WARN] fournisseur inconnu ignore : {name}")
+            continue
+        try:
+            note = fn(payload)
+            print(f"[OK] note redigee par {LABELS.get(name, name)}.")
+            header = f"_Note redigee par {LABELS.get(name, name)}._\n\n"
+            return header + note
+        except Exception as e:  # noqa: BLE001
+            print(f"[WARN] {LABELS.get(name, name)} indisponible ({e}) -> repli suivant.")
+    print("[WARN] tous les fournisseurs IA ont echoue : note de secours deterministe.")
+    return _fallback_note(payload)
+
+
 def _fallback_note(payload: dict) -> str:
     lines = [f"# Note quotidienne — {payload['date']}", "",
-             "*(Note de secours generee sans IA : cle API absente.)*", ""]
+             "*(Note de secours generee sans IA : aucun fournisseur disponible.)*", ""]
     for c in payload["cryptos"]:
         d, f, m, fu, s = c["decision"], c["forecast"], c["model"], c["fundamental"], c["signal"]
         g = d["gates"]
@@ -86,36 +181,3 @@ def _fallback_note(payload: dict) -> str:
                  "Actifs tres volatils : pertes possibles. Un backtest positif ne garantit "
                  "aucune performance future._")
     return "\n".join(lines)
-
-
-def write_note(payload: dict) -> str:
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
-    if not api_key:
-        print("[WARN] ANTHROPIC_API_KEY absente : note de secours (sans IA).")
-        return _fallback_note(payload)
-
-    try:
-        import anthropic
-    except ImportError:
-        print("[WARN] paquet anthropic absent : note de secours.")
-        return _fallback_note(payload)
-
-    model = os.environ.get("ANTHROPIC_MODEL", "claude-sonnet-4-5")
-    client = anthropic.Anthropic(api_key=api_key)
-    user_msg = (
-        "Voici les donnees calculees pour aujourd'hui (JSON). Redige la note "
-        "quotidienne en respectant strictement tes regles. Pour chaque crypto : "
-        "un titre avec le biais technique, un paragraphe interpretant les "
-        "indicateurs fournis, puis la fourchette de projection presentee comme "
-        "une mesure d'incertitude. Termine par un rappel de risque global.\n\n"
-        + json.dumps(payload, ensure_ascii=False, indent=2)
-    )
-    try:
-        resp = client.messages.create(
-            model=model, max_tokens=2000, system=SYSTEM,
-            messages=[{"role": "user", "content": user_msg}],
-        )
-        return resp.content[0].text
-    except Exception as e:  # noqa: BLE001
-        print(f"[WARN] appel API echoue ({e}) : note de secours.")
-        return _fallback_note(payload)
