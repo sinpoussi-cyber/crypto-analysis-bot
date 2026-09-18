@@ -50,7 +50,12 @@ def _from_binance(symbol: str, days: int) -> pd.DataFrame:
     return df[["date", "open", "high", "low", "close", "volume"]].reset_index(drop=True)
 
 
+COINGECKO_MAX_DAYS = 365  # plan Demo gratuit : historique limite a 365 jours (erreur 10012 au-dela)
+
+
 def _from_coingecko(cg_id: str, days: int) -> pd.DataFrame:
+    # Le plan Demo plafonne l'historique a 365 jours -> on borne pour eviter l'erreur 10012.
+    days = min(int(days), COINGECKO_MAX_DAYS)
     # PAS d'`interval` (param payant -> 401). days>90 => granularite journaliere auto.
     data = cg_get(f"/coins/{cg_id}/market_chart", {"vs_currency": "usd", "days": days})
     prices = data.get("prices", [])
