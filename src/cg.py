@@ -1,12 +1,6 @@
 """
 Client CoinGecko partage : cle demo (gratuite), throttling, backoff sur 429,
 et DIAGNOSTIC clair des erreurs (affiche la vraie cause dans le log).
-
-L'API publique CoinGecko exige une cle demo (sinon 401) et limite le debit
-(sinon 429). Ce module centralise l'entete `x-cg-demo-api-key`, un intervalle
-minimal entre appels, des reessais sur 429, et un message explicite sur 401/403.
-
-Toutes les requetes CoinGecko du projet passent par cg_get().
 """
 from __future__ import annotations
 import os
@@ -35,8 +29,7 @@ def _key_present() -> bool:
 
 
 def cg_get(path, params=None):
-    """GET CoinGecko avec throttle + backoff. `path` commence par '/'.
-    Leve RuntimeError avec un message explicite si la cause est identifiable."""
+    """GET CoinGecko avec throttle + backoff. `path` commence par '/'."""
     url = BASE + path
     for attempt in range(MAX_RETRIES):
         wait = MIN_INTERVAL - (time.time() - _last_call[0])
@@ -68,7 +61,6 @@ def cg_get(path, params=None):
                     else "cle refusee : verifie la valeur de COINGECKO_API_KEY (format CG-...)")
             raise RuntimeError("CoinGecko " + str(r.status_code) + " sur " + path
                                + " -> " + hint + ". Reponse: " + body)
-        # autre code inattendu
         raise RuntimeError("CoinGecko " + str(r.status_code) + " sur " + path
                            + ". Reponse: " + body)
 
