@@ -18,7 +18,8 @@ import yaml
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from src import (data_sources, technical as T, indicators, signals, forecast,  # noqa: E402
-                 fundamental, model as ML, decision, state as ST, ai_note, notify, universe)
+                 fundamental, model as ML, decision, state as ST, ai_note, notify,
+                 universe, report_docx, levels)
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
@@ -83,10 +84,14 @@ def build_payload(cfg: dict) -> dict:
         # DECISION a 4 feux
         dec = decision.decide(name, comp_now, tech_edge, fund, mdl, ind.get("ann_vol"), thr)
 
+        # NIVEAUX DE TRADE mecaniques (prix d'achat, objectif, stop, duree)
+        lv = levels.compute(ind["price"], ind, fc, dec, sig, cfg)
+
         out.append(dict(name=name, last_date=str(df["date"].iloc[-1].date()),
                         indicators=ind, params=params, enabled=enabled,
                         composite=round(comp_now, 3), tech_edge=tech_edge,
                         signal=sig, fundamental=fund, model=mdl, forecast=fc, decision=dec,
+                        levels=lv,
                         tuned_on=tuned.get("updated"), from_default=tuned.get("from_default")))
         print(f"  {name:5} sig={sig['action']:12} | decision={dec['action']:9} "
               f"({dec['convergence']}) comp={comp_now:+.2f} fond={fund.get('score')} AUC={mdl.get('auc')}")
@@ -126,10 +131,19 @@ def main():
         (ROOT / "reports" / f"{payload['date']}.md").write_text(full, encoding="utf-8")
         print(f"Rapport ecrit : reports/{payload['date']}.md")
 
+    # Rapport Word (.docx) — genere puis joint a l'email
+    docx_path = None
+    try:
+        docx_path = report_docx.build(payload, str(ROOT / "reports"))
+        print(f"Rapport Word ecrit : {docx_path}")
+    except Exception as e:  # noqa: BLE001
+        print(f"[WARN] generation du .docx echouee : {e}")
+
     if cfg["notify"].get("telegram"):
         notify.send_telegram(full)
     if cfg["notify"].get("email"):
-        notify.send_email(full, subject=f"Note crypto — {payload['date']}")
+        attach = [docx_path] if docx_path else None
+        notify.send_email(full, subject=f"Note crypto — {payload['date']}", attachments=attach)
     print("Termine.")
 
 
