@@ -34,6 +34,16 @@ signal:
   buy_threshold: 0.35      # entree (score composite)
   sell_threshold: -0.10    # sortie (hysteresis)
 
+# --- Niveaux de trade mecaniques (prix d'achat, objectif, stop, duree) ---
+# Derives de la volatilite, PAS d'une prediction. tp_sigma/sl_sigma = multiples
+# d'ecart-type ; ratio objectif/stop = tp_sigma / sl_sigma.
+levels:
+  tp_sigma: 1.5            # objectif de vente a la hausse : +1.5 sigma
+  sl_sigma: 1.0            # seuil de vente a la baisse (stop) : -1.0 sigma
+  hold_k: 21              # duree = hold_k / volatilite_annualisee
+  hold_min: 7            # duree minimale (jours)
+  hold_max: 45           # duree maximale (jours)
+
 # --- Canaux d'envoi ---
 notify:
   telegram: false         # Telegram desactive
