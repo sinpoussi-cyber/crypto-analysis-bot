@@ -175,8 +175,15 @@ def _fallback_note(payload: dict) -> str:
             f"(vol. annualisee {g['risque']['vol_annualisee']})",
             f"- Projection 30j (fourchette, pas une prevision) : "
             f"{f['lo95_pct']*100:+.0f}% a {f['hi95_pct']*100:+.0f}% autour du prix actuel.",
-            "",
         ]
+        lv = c.get("levels")
+        if lv:
+            lines.append(
+                f"- Plan de trade (volatilite, pas une prevision) : achat ~{lv['entry']:.4f} "
+                f"| vente hausse {lv['take_profit']:.4f} ({lv['tp_pct']*100:+.0f}%) "
+                f"| vente baisse {lv['stop_loss']:.4f} ({lv['sl_pct']*100:+.0f}%) "
+                f"| detention ~{lv['horizon_days']} j | ratio G/P {lv.get('rr')}")
+        lines.append("")
     lines.append("_Information a but educatif — pas un conseil en investissement. "
                  "Actifs tres volatils : pertes possibles. Un backtest positif ne garantit "
                  "aucune performance future._")
