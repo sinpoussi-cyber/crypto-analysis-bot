@@ -8,20 +8,26 @@ Utilise python-docx (aucune dependance Node). Renvoie le chemin du fichier ecrit
 from __future__ import annotations
 import pathlib
 
-from docx import Document
-from docx.shared import Pt, RGBColor, Twips
-from docx.enum.text import WD_ALIGN_PARAGRAPH
-from docx.enum.table import WD_TABLE_ALIGNMENT
-from docx.oxml.ns import qn
-from docx.oxml import OxmlElement
-
-NAVY = RGBColor(0x1F, 0x38, 0x64)
-BLUE = RGBColor(0x2E, 0x54, 0x96)
-GREEN = RGBColor(0x1E, 0x7D, 0x32)
-RED = RGBColor(0xC6, 0x28, 0x28)
-AMBER = RGBColor(0xB2, 0x6A, 0x00)
-GREY = RGBColor(0x55, 0x55, 0x55)
-WHITE = RGBColor(0xFF, 0xFF, 0xFF)
+# Import defensif : si python-docx est absent, l'import du module NE plante PAS
+# (le reste du pipeline — analyse, reentrainement, email texte — continue).
+# La generation du .docx echouera proprement, capturee par le try/except de main.
+try:
+    from docx import Document
+    from docx.shared import Pt, RGBColor, Twips
+    from docx.enum.text import WD_ALIGN_PARAGRAPH
+    from docx.enum.table import WD_TABLE_ALIGNMENT
+    from docx.oxml.ns import qn
+    from docx.oxml import OxmlElement
+    _HAS_DOCX = True
+    NAVY = RGBColor(0x1F, 0x38, 0x64)
+    BLUE = RGBColor(0x2E, 0x54, 0x96)
+    GREEN = RGBColor(0x1E, 0x7D, 0x32)
+    RED = RGBColor(0xC6, 0x28, 0x28)
+    AMBER = RGBColor(0xB2, 0x6A, 0x00)
+    GREY = RGBColor(0x55, 0x55, 0x55)
+    WHITE = RGBColor(0xFF, 0xFF, 0xFF)
+except Exception:  # noqa: BLE001
+    _HAS_DOCX = False
 
 
 def _shade(el, fill_hex):
@@ -57,6 +63,8 @@ def _pct(x, d=1):
 
 
 def build(payload: dict, out_dir: str) -> str:
+    if not _HAS_DOCX:
+        raise RuntimeError("python-docx non installe (ajoute 'python-docx>=1.1' a requirements.txt)")
     date = payload["date"]
     cryptos = payload["cryptos"]
     doc = Document()
