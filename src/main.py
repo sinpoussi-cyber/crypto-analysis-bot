@@ -139,11 +139,19 @@ def main():
     except Exception as e:  # noqa: BLE001
         print(f"[WARN] generation du .docx echouee : {e}")
 
+    # Envois : une erreur d'envoi ne doit pas faire echouer tout le run
+    # (l'analyse, le rapport et le .docx sont deja produits et commites).
     if cfg["notify"].get("telegram"):
-        notify.send_telegram(full)
+        try:
+            notify.send_telegram(full)
+        except Exception as e:  # noqa: BLE001
+            print(f"[WARN] envoi Telegram echoue : {e}")
     if cfg["notify"].get("email"):
-        attach = [docx_path] if docx_path else None
-        notify.send_email(full, subject=f"Note crypto — {payload['date']}", attachments=attach)
+        try:
+            attach = [docx_path] if docx_path else None
+            notify.send_email(full, subject=f"Note crypto — {payload['date']}", attachments=attach)
+        except Exception as e:  # noqa: BLE001
+            print(f"[WARN] envoi email echoue : {e}")
     print("Termine.")
 
 
