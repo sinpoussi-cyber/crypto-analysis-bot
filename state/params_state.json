@@ -28,60 +28,60 @@
       }
     },
     "enabled": {
-      "ma": true,
-      "rsi": true,
+      "ma": false,
+      "rsi": false,
       "macd": true,
       "stoch": true,
       "boll": false
     },
     "valid": {
       "ma": {
-        "sharpe": 1.059,
-        "ret": 0.0438,
-        "bh": 0.2294,
-        "n_trades": 2
+        "sharpe": -1.494,
+        "ret": -0.055,
+        "bh": 0.3246,
+        "n_trades": 3
       },
       "rsi": {
-        "sharpe": 4.084,
-        "ret": 0.2799,
-        "bh": 0.2294,
-        "n_trades": 1
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.3246,
+        "n_trades": 0
       },
       "macd": {
-        "sharpe": 3.837,
-        "ret": 0.2024,
-        "bh": 0.2294,
-        "n_trades": 5
+        "sharpe": 3.623,
+        "ret": 0.2256,
+        "bh": 0.3246,
+        "n_trades": 7
       },
       "stoch": {
-        "sharpe": 4.598,
-        "ret": 0.2805,
-        "bh": 0.2294,
-        "n_trades": 3
+        "sharpe": 2.993,
+        "ret": 0.1197,
+        "bh": 0.3246,
+        "n_trades": 2
       },
       "boll": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.2294,
+        "bh": 0.3246,
         "n_trades": 0
       }
     },
     "composite_valid": {
-      "sharpe": 1.059,
-      "total_return": 0.0438,
-      "bh_total_return": 0.2294,
-      "max_drawdown": -0.0698,
-      "hit_rate": 1.0,
-      "n_trades": 2,
+      "sharpe": 3.623,
+      "total_return": 0.2256,
+      "bh_total_return": 0.3246,
+      "max_drawdown": -0.0415,
+      "hit_rate": 0.333,
+      "n_trades": 7,
       "beats_bh": false
     },
     "model": {
-      "auc": 0.469,
+      "auc": 0.449,
       "skill": false,
-      "proba_up": 0.272,
+      "proba_up": 0.338,
       "reason": "AUC proche de 0.5 : pas d'edge fiable"
     },
-    "updated": "2026-09-20"
+    "updated": "2026-09-25"
   },
   "ETH": {
     "params": {
@@ -90,7 +90,7 @@
         "slow": 50
       },
       "rsi": {
-        "n": 14,
+        "n": 21,
         "low": 25,
         "high": 75
       },
@@ -113,59 +113,59 @@
     },
     "enabled": {
       "ma": true,
-      "rsi": true,
+      "rsi": false,
       "macd": true,
-      "stoch": true,
+      "stoch": false,
       "boll": false
     },
     "valid": {
       "ma": {
-        "sharpe": 1.777,
-        "ret": 0.0656,
-        "bh": 0.3613,
+        "sharpe": 1.712,
+        "ret": 0.0675,
+        "bh": 0.4214,
         "n_trades": 1
       },
       "rsi": {
-        "sharpe": 3.958,
-        "ret": 0.3413,
-        "bh": 0.3613,
-        "n_trades": 2
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.4214,
+        "n_trades": 0
       },
       "macd": {
-        "sharpe": 2.91,
-        "ret": 0.2615,
-        "bh": 0.3613,
-        "n_trades": 4
+        "sharpe": 2.078,
+        "ret": 0.1773,
+        "bh": 0.4214,
+        "n_trades": 7
       },
       "stoch": {
-        "sharpe": 3.462,
-        "ret": 0.3013,
-        "bh": 0.3613,
-        "n_trades": 2
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.4214,
+        "n_trades": 0
       },
       "boll": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.3613,
+        "bh": 0.4214,
         "n_trades": 0
       }
     },
     "composite_valid": {
-      "sharpe": 0.618,
-      "total_return": 0.0014,
-      "bh_total_return": 0.3613,
-      "max_drawdown": -0.0025,
-      "hit_rate": 1.0,
-      "n_trades": 2,
+      "sharpe": 2.078,
+      "total_return": 0.1773,
+      "bh_total_return": 0.4214,
+      "max_drawdown": -0.0638,
+      "hit_rate": 0.333,
+      "n_trades": 7,
       "beats_bh": false
     },
     "model": {
-      "auc": 0.594,
+      "auc": 0.598,
       "skill": true,
-      "proba_up": 0.159,
+      "proba_up": 0.42,
       "reason": "edge mesure"
     },
-    "updated": "2026-09-20"
+    "updated": "2026-09-25"
   },
   "SOL": {
     "params": {
@@ -179,8 +179,8 @@
         "high": 75
       },
       "macd": {
-        "fast": 5,
-        "slow": 35,
+        "fast": 8,
+        "slow": 21,
         "signal": 5
       },
       "stoch": {
@@ -197,7 +197,7 @@
     },
     "enabled": {
       "ma": false,
-      "rsi": true,
+      "rsi": false,
       "macd": true,
       "stoch": false,
       "boll": false
@@ -206,41 +206,41 @@
       "ma": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.4244,
+        "bh": 0.5782,
         "n_trades": 0
       },
       "rsi": {
-        "sharpe": 4.312,
-        "ret": 0.4678,
-        "bh": 0.4244,
-        "n_trades": 1
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.5782,
+        "n_trades": 0
       },
       "macd": {
-        "sharpe": 4.304,
-        "ret": 0.3481,
-        "bh": 0.4244,
-        "n_trades": 5
+        "sharpe": 4.056,
+        "ret": 0.3557,
+        "bh": 0.5782,
+        "n_trades": 9
       },
       "stoch": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.4244,
+        "bh": 0.5782,
         "n_trades": 0
       },
       "boll": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.4244,
+        "bh": 0.5782,
         "n_trades": 0
       }
     },
     "composite_valid": {
-      "sharpe": 4.584,
-      "total_return": 0.3766,
-      "bh_total_return": 0.4244,
+      "sharpe": 4.056,
+      "total_return": 0.3557,
+      "bh_total_return": 0.5782,
       "max_drawdown": -0.0724,
-      "hit_rate": 1.0,
-      "n_trades": 3,
+      "hit_rate": 0.5,
+      "n_trades": 9,
       "beats_bh": false
     },
     "model": {
@@ -249,18 +249,18 @@
       "proba_up": null,
       "reason": "donnees insuffisantes"
     },
-    "updated": "2026-09-20"
+    "updated": "2026-09-25"
   },
   "TRX": {
     "params": {
       "ma": {
-        "fast": 20,
-        "slow": 50
+        "fast": 50,
+        "slow": 200
       },
       "rsi": {
-        "n": 21,
-        "low": 35,
-        "high": 65
+        "n": 14,
+        "low": 30,
+        "high": 70
       },
       "macd": {
         "fast": 12,
@@ -280,60 +280,60 @@
       }
     },
     "enabled": {
-      "ma": true,
+      "ma": false,
       "rsi": false,
-      "macd": false,
+      "macd": true,
       "stoch": false,
       "boll": false
     },
     "valid": {
       "ma": {
-        "sharpe": 0.224,
-        "ret": 0.0018,
-        "bh": 0.0335,
-        "n_trades": 1
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.047,
+        "n_trades": 0
       },
       "rsi": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.0335,
+        "bh": 0.047,
         "n_trades": 0
       },
       "macd": {
-        "sharpe": -0.952,
-        "ret": -0.0209,
-        "bh": 0.0335,
+        "sharpe": 0.658,
+        "ret": 0.0115,
+        "bh": 0.047,
         "n_trades": 7
       },
       "stoch": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.0335,
+        "bh": 0.047,
         "n_trades": 0
       },
       "boll": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.0335,
+        "bh": 0.047,
         "n_trades": 0
       }
     },
     "composite_valid": {
-      "sharpe": 0.224,
-      "total_return": 0.0018,
-      "bh_total_return": 0.0335,
-      "max_drawdown": -0.0209,
-      "hit_rate": null,
-      "n_trades": 1,
+      "sharpe": 0.658,
+      "total_return": 0.0115,
+      "bh_total_return": 0.047,
+      "max_drawdown": -0.0454,
+      "hit_rate": 0.333,
+      "n_trades": 7,
       "beats_bh": false
     },
     "model": {
-      "auc": 0.453,
+      "auc": null,
       "skill": false,
-      "proba_up": 0.527,
-      "reason": "AUC proche de 0.5 : pas d'edge fiable"
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
     },
-    "updated": "2026-09-20"
+    "updated": "2026-09-25"
   },
   "LINK": {
     "params": {
@@ -365,7 +365,7 @@
     },
     "enabled": {
       "ma": false,
-      "rsi": true,
+      "rsi": false,
       "macd": true,
       "stoch": false,
       "boll": false
@@ -374,41 +374,41 @@
       "ma": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.4395,
+        "bh": 0.5783,
         "n_trades": 0
       },
       "rsi": {
-        "sharpe": 4.79,
-        "ret": 0.2911,
-        "bh": 0.4395,
-        "n_trades": 2
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.5783,
+        "n_trades": 0
       },
       "macd": {
-        "sharpe": 2.252,
-        "ret": 0.1933,
-        "bh": 0.4395,
-        "n_trades": 7
+        "sharpe": 2.625,
+        "ret": 0.2537,
+        "bh": 0.5783,
+        "n_trades": 9
       },
       "stoch": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.4395,
+        "bh": 0.5783,
         "n_trades": 0
       },
       "boll": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.4395,
+        "bh": 0.5783,
         "n_trades": 0
       }
     },
     "composite_valid": {
-      "sharpe": 2.721,
-      "total_return": 0.2396,
-      "bh_total_return": 0.4395,
-      "max_drawdown": -0.1205,
-      "hit_rate": 0.333,
-      "n_trades": 7,
+      "sharpe": 2.625,
+      "total_return": 0.2537,
+      "bh_total_return": 0.5783,
+      "max_drawdown": -0.1534,
+      "hit_rate": 0.25,
+      "n_trades": 9,
       "beats_bh": false
     },
     "model": {
@@ -417,7 +417,7 @@
       "proba_up": null,
       "reason": "donnees insuffisantes"
     },
-    "updated": "2026-09-20"
+    "updated": "2026-09-25"
   },
   "GRAM": {
     "params": {
@@ -426,9 +426,9 @@
         "slow": 50
       },
       "rsi": {
-        "n": 21,
-        "low": 25,
-        "high": 75
+        "n": 14,
+        "low": 35,
+        "high": 65
       },
       "macd": {
         "fast": 19,
@@ -449,59 +449,59 @@
     },
     "enabled": {
       "ma": false,
-      "rsi": false,
+      "rsi": true,
       "macd": false,
-      "stoch": false,
+      "stoch": true,
       "boll": false
     },
     "valid": {
       "ma": {
-        "sharpe": -1.244,
-        "ret": -0.0215,
-        "bh": -0.1874,
-        "n_trades": 2
+        "sharpe": -2.719,
+        "ret": -0.0445,
+        "bh": -0.034,
+        "n_trades": 1
       },
       "rsi": {
-        "sharpe": 0.0,
-        "ret": 0.0,
-        "bh": -0.1874,
-        "n_trades": 0
+        "sharpe": 3.661,
+        "ret": 0.1241,
+        "bh": -0.034,
+        "n_trades": 2
       },
       "macd": {
-        "sharpe": -0.623,
-        "ret": -0.0685,
-        "bh": -0.1874,
+        "sharpe": -1.764,
+        "ret": -0.0925,
+        "bh": -0.034,
         "n_trades": 5
       },
       "stoch": {
-        "sharpe": -0.41,
-        "ret": -0.0351,
-        "bh": -0.1874,
-        "n_trades": 2
+        "sharpe": 3.067,
+        "ret": 0.1435,
+        "bh": -0.034,
+        "n_trades": 3
       },
       "boll": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": -0.1874,
+        "bh": -0.034,
         "n_trades": 0
       }
     },
     "composite_valid": {
-      "sharpe": 0.0,
-      "total_return": 0.0,
-      "bh_total_return": -0.1874,
-      "max_drawdown": 0.0,
-      "hit_rate": null,
-      "n_trades": 0,
+      "sharpe": 3.463,
+      "total_return": 0.1499,
+      "bh_total_return": -0.034,
+      "max_drawdown": -0.0436,
+      "hit_rate": 1.0,
+      "n_trades": 3,
       "beats_bh": true
     },
     "model": {
-      "auc": 0.536,
-      "skill": false,
-      "proba_up": 0.462,
-      "reason": "AUC proche de 0.5 : pas d'edge fiable"
+      "auc": 0.575,
+      "skill": true,
+      "proba_up": 0.281,
+      "reason": "edge mesure"
     },
-    "updated": "2026-09-18"
+    "updated": "2026-09-25"
   },
   "BNB": {
     "params": {
@@ -510,14 +510,14 @@
         "slow": 200
       },
       "rsi": {
-        "n": 7,
-        "low": 25,
-        "high": 75
+        "n": 21,
+        "low": 35,
+        "high": 65
       },
       "macd": {
-        "fast": 8,
-        "slow": 21,
-        "signal": 5
+        "fast": 19,
+        "slow": 39,
+        "signal": 9
       },
       "stoch": {
         "k": 21,
@@ -542,41 +542,41 @@
       "ma": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.3347,
+        "bh": 0.3724,
         "n_trades": 0
       },
       "rsi": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.3347,
+        "bh": 0.3724,
         "n_trades": 0
       },
       "macd": {
-        "sharpe": 2.845,
-        "ret": 0.149,
-        "bh": 0.3347,
-        "n_trades": 9
+        "sharpe": 4.118,
+        "ret": 0.276,
+        "bh": 0.3724,
+        "n_trades": 3
       },
       "stoch": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.3347,
+        "bh": 0.3724,
         "n_trades": 0
       },
       "boll": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.3347,
+        "bh": 0.3724,
         "n_trades": 0
       }
     },
     "composite_valid": {
-      "sharpe": 2.845,
-      "total_return": 0.149,
-      "bh_total_return": 0.3347,
-      "max_drawdown": -0.059,
-      "hit_rate": 0.75,
-      "n_trades": 9,
+      "sharpe": 4.118,
+      "total_return": 0.276,
+      "bh_total_return": 0.3724,
+      "max_drawdown": -0.0757,
+      "hit_rate": 1.0,
+      "n_trades": 3,
       "beats_bh": false
     },
     "model": {
@@ -585,7 +585,7 @@
       "proba_up": null,
       "reason": "donnees insuffisantes"
     },
-    "updated": "2026-09-20"
+    "updated": "2026-09-25"
   },
   "XRP": {
     "params": {
@@ -599,8 +599,8 @@
         "high": 75
       },
       "macd": {
-        "fast": 5,
-        "slow": 35,
+        "fast": 8,
+        "slow": 21,
         "signal": 5
       },
       "stoch": {
@@ -617,7 +617,7 @@
     },
     "enabled": {
       "ma": false,
-      "rsi": true,
+      "rsi": false,
       "macd": true,
       "stoch": true,
       "boll": false
@@ -626,41 +626,41 @@
       "ma": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.2353,
+        "bh": 0.4402,
         "n_trades": 0
       },
       "rsi": {
-        "sharpe": 3.12,
-        "ret": 0.4022,
-        "bh": 0.2353,
-        "n_trades": 1
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.4402,
+        "n_trades": 0
       },
       "macd": {
-        "sharpe": 2.968,
-        "ret": 0.3077,
-        "bh": 0.2353,
-        "n_trades": 5
+        "sharpe": 3.756,
+        "ret": 0.4483,
+        "bh": 0.4402,
+        "n_trades": 7
       },
       "stoch": {
         "sharpe": 4.052,
         "ret": 0.4357,
-        "bh": 0.2353,
+        "bh": 0.4402,
         "n_trades": 2
       },
       "boll": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.2353,
+        "bh": 0.4402,
         "n_trades": 0
       }
     },
     "composite_valid": {
-      "sharpe": 3.526,
-      "total_return": 0.3773,
-      "bh_total_return": 0.2353,
-      "max_drawdown": -0.0911,
-      "hit_rate": 1.0,
-      "n_trades": 2,
+      "sharpe": 3.756,
+      "total_return": 0.4483,
+      "bh_total_return": 0.4402,
+      "max_drawdown": -0.092,
+      "hit_rate": 0.333,
+      "n_trades": 7,
       "beats_bh": true
     },
     "model": {
@@ -669,7 +669,7 @@
       "proba_up": null,
       "reason": "donnees insuffisantes"
     },
-    "updated": "2026-09-20"
+    "updated": "2026-09-25"
   },
   "ZEC": {
     "params": {
@@ -678,7 +678,7 @@
         "slow": 30
       },
       "rsi": {
-        "n": 7,
+        "n": 21,
         "low": 30,
         "high": 70
       },
@@ -701,59 +701,59 @@
     },
     "enabled": {
       "ma": true,
-      "rsi": true,
+      "rsi": false,
       "macd": true,
       "stoch": false,
       "boll": false
     },
     "valid": {
       "ma": {
-        "sharpe": 5.081,
-        "ret": 1.5804,
-        "bh": 1.853,
+        "sharpe": 4.392,
+        "ret": 1.0111,
+        "bh": 2.246,
         "n_trades": 1
       },
       "rsi": {
-        "sharpe": 3.119,
-        "ret": 0.2062,
-        "bh": 1.853,
-        "n_trades": 2
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 2.246,
+        "n_trades": 0
       },
       "macd": {
-        "sharpe": 5.479,
-        "ret": 1.8685,
-        "bh": 1.853,
-        "n_trades": 1
+        "sharpe": 5.594,
+        "ret": 2.0189,
+        "bh": 2.246,
+        "n_trades": 3
       },
       "stoch": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 1.853,
+        "bh": 2.246,
         "n_trades": 0
       },
       "boll": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 1.853,
+        "bh": 2.246,
         "n_trades": 0
       }
     },
     "composite_valid": {
-      "sharpe": 4.265,
-      "total_return": 0.9117,
-      "bh_total_return": 1.853,
+      "sharpe": 5.594,
+      "total_return": 2.0189,
+      "bh_total_return": 2.246,
       "max_drawdown": -0.1457,
-      "hit_rate": null,
-      "n_trades": 1,
+      "hit_rate": 1.0,
+      "n_trades": 3,
       "beats_bh": false
     },
     "model": {
-      "auc": 0.508,
+      "auc": 0.528,
       "skill": false,
-      "proba_up": 0.559,
+      "proba_up": 0.456,
       "reason": "AUC proche de 0.5 : pas d'edge fiable"
     },
-    "updated": "2026-09-20"
+    "updated": "2026-09-25"
   },
   "FIGR_HELOC": {
     "params": {
@@ -785,7 +785,7 @@
     },
     "enabled": {
       "ma": false,
-      "rsi": false,
+      "rsi": true,
       "macd": false,
       "stoch": true,
       "boll": false
@@ -794,38 +794,38 @@
       "ma": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.0175,
+        "bh": 0.007,
         "n_trades": 0
       },
       "rsi": {
-        "sharpe": 0.0,
-        "ret": 0.0,
-        "bh": 0.0175,
-        "n_trades": 0
+        "sharpe": 0.572,
+        "ret": 0.0238,
+        "bh": 0.007,
+        "n_trades": 1
       },
       "macd": {
-        "sharpe": -8.571,
-        "ret": -0.3203,
-        "bh": 0.0175,
-        "n_trades": 23
+        "sharpe": -7.895,
+        "ret": -0.299,
+        "bh": 0.007,
+        "n_trades": 21
       },
       "stoch": {
-        "sharpe": 0.675,
-        "ret": 0.0259,
-        "bh": 0.0175,
+        "sharpe": 0.546,
+        "ret": 0.0202,
+        "bh": 0.007,
         "n_trades": 1
       },
       "boll": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.0175,
+        "bh": 0.007,
         "n_trades": 0
       }
     },
     "composite_valid": {
-      "sharpe": 0.675,
-      "total_return": 0.0259,
-      "bh_total_return": 0.0175,
+      "sharpe": 0.572,
+      "total_return": 0.0238,
+      "bh_total_return": 0.007,
       "max_drawdown": -0.0434,
       "hit_rate": null,
       "n_trades": 1,
@@ -837,7 +837,7 @@
       "proba_up": null,
       "reason": "donnees insuffisantes"
     },
-    "updated": "2026-09-20"
+    "updated": "2026-09-25"
   },
   "HYPE": {
     "params": {
@@ -859,8 +859,8 @@
         "k": 21,
         "d": 5,
         "smooth": 5,
-        "low": 25,
-        "high": 75
+        "low": 20,
+        "high": 80
       },
       "boll": {
         "n": 20,
@@ -869,59 +869,59 @@
     },
     "enabled": {
       "ma": true,
-      "rsi": true,
+      "rsi": false,
       "macd": true,
-      "stoch": true,
+      "stoch": false,
       "boll": false
     },
     "valid": {
       "ma": {
-        "sharpe": 1.734,
-        "ret": 0.1016,
-        "bh": 0.5524,
+        "sharpe": 2.511,
+        "ret": 0.1451,
+        "bh": 0.6432,
         "n_trades": 1
       },
       "rsi": {
-        "sharpe": 3.086,
-        "ret": 0.2896,
-        "bh": 0.5524,
-        "n_trades": 2
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.6432,
+        "n_trades": 0
       },
       "macd": {
-        "sharpe": 3.935,
-        "ret": 0.4739,
-        "bh": 0.5524,
-        "n_trades": 5
+        "sharpe": 4.068,
+        "ret": 0.4863,
+        "bh": 0.6432,
+        "n_trades": 7
       },
       "stoch": {
-        "sharpe": 2.315,
-        "ret": 0.0822,
-        "bh": 0.5524,
-        "n_trades": 1
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.6432,
+        "n_trades": 0
       },
       "boll": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.5524,
+        "bh": 0.6432,
         "n_trades": 0
       }
     },
     "composite_valid": {
-      "sharpe": 2.315,
-      "total_return": 0.0822,
-      "bh_total_return": 0.5524,
-      "max_drawdown": -0.0042,
-      "hit_rate": null,
-      "n_trades": 1,
+      "sharpe": 4.068,
+      "total_return": 0.4863,
+      "bh_total_return": 0.6432,
+      "max_drawdown": -0.068,
+      "hit_rate": 0.333,
+      "n_trades": 7,
       "beats_bh": false
     },
     "model": {
-      "auc": 0.562,
+      "auc": 0.55,
       "skill": true,
-      "proba_up": 0.281,
+      "proba_up": 0.505,
       "reason": "edge mesure"
     },
-    "updated": "2026-09-20"
+    "updated": "2026-09-25"
   },
   "DOGE": {
     "params": {
@@ -930,9 +930,9 @@
         "slow": 30
       },
       "rsi": {
-        "n": 14,
-        "low": 25,
-        "high": 75
+        "n": 21,
+        "low": 30,
+        "high": 70
       },
       "macd": {
         "fast": 19,
@@ -952,60 +952,60 @@
       }
     },
     "enabled": {
-      "ma": true,
-      "rsi": true,
-      "macd": true,
+      "ma": false,
+      "rsi": false,
+      "macd": false,
       "stoch": false,
       "boll": false
     },
     "valid": {
       "ma": {
-        "sharpe": 0.282,
-        "ret": 0.0029,
-        "bh": 0.202,
-        "n_trades": 2
+        "sharpe": -1.367,
+        "ret": -0.1023,
+        "bh": 0.3615,
+        "n_trades": 3
       },
       "rsi": {
-        "sharpe": 2.521,
-        "ret": 0.2518,
-        "bh": 0.202,
-        "n_trades": 1
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.3615,
+        "n_trades": 0
       },
       "macd": {
-        "sharpe": 1.014,
-        "ret": 0.0692,
-        "bh": 0.202,
-        "n_trades": 4
+        "sharpe": -0.469,
+        "ret": -0.0654,
+        "bh": 0.3615,
+        "n_trades": 11
       },
       "stoch": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.202,
+        "bh": 0.3615,
         "n_trades": 0
       },
       "boll": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.202,
+        "bh": 0.3615,
         "n_trades": 0
       }
     },
     "composite_valid": {
-      "sharpe": 1.831,
-      "total_return": 0.159,
-      "bh_total_return": 0.202,
-      "max_drawdown": -0.1427,
-      "hit_rate": 1.0,
-      "n_trades": 2,
+      "sharpe": 0.0,
+      "total_return": 0.0,
+      "bh_total_return": 0.3615,
+      "max_drawdown": 0.0,
+      "hit_rate": null,
+      "n_trades": 0,
       "beats_bh": false
     },
     "model": {
-      "auc": 0.561,
-      "skill": true,
-      "proba_up": 0.168,
-      "reason": "edge mesure"
+      "auc": 0.544,
+      "skill": false,
+      "proba_up": 0.215,
+      "reason": "AUC proche de 0.5 : pas d'edge fiable"
     },
-    "updated": "2026-09-20"
+    "updated": "2026-09-25"
   },
   "XMR": {
     "params": {
@@ -1044,52 +1044,52 @@
     },
     "valid": {
       "ma": {
-        "sharpe": 3.711,
-        "ret": 0.3313,
-        "bh": 0.5512,
+        "sharpe": 3.273,
+        "ret": 0.2866,
+        "bh": 0.6371,
         "n_trades": 1
       },
       "rsi": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.5512,
+        "bh": 0.6371,
         "n_trades": 0
       },
       "macd": {
-        "sharpe": 3.932,
-        "ret": 0.3686,
-        "bh": 0.5512,
-        "n_trades": 4
+        "sharpe": 4.571,
+        "ret": 0.4598,
+        "bh": 0.6371,
+        "n_trades": 3
       },
       "stoch": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.5512,
+        "bh": 0.6371,
         "n_trades": 0
       },
       "boll": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.5512,
+        "bh": 0.6371,
         "n_trades": 0
       }
     },
     "composite_valid": {
-      "sharpe": 4.229,
-      "total_return": 0.4556,
-      "bh_total_return": 0.5512,
+      "sharpe": 5.108,
+      "total_return": 0.5992,
+      "bh_total_return": 0.6371,
       "max_drawdown": -0.1026,
-      "hit_rate": 0.0,
-      "n_trades": 3,
+      "hit_rate": null,
+      "n_trades": 1,
       "beats_bh": false
     },
     "model": {
-      "auc": 0.643,
+      "auc": 0.587,
       "skill": true,
-      "proba_up": 0.477,
+      "proba_up": 0.52,
       "reason": "edge mesure"
     },
-    "updated": "2026-09-20"
+    "updated": "2026-09-25"
   },
   "RAIN": {
     "params": {
@@ -1098,9 +1098,9 @@
         "slow": 30
       },
       "rsi": {
-        "n": 7,
-        "low": 35,
-        "high": 65
+        "n": 21,
+        "low": 30,
+        "high": 70
       },
       "macd": {
         "fast": 19,
@@ -1128,58 +1128,58 @@
     },
     "valid": {
       "ma": {
-        "sharpe": -0.353,
-        "ret": -0.069,
-        "bh": -0.0416,
+        "sharpe": -5.375,
+        "ret": -0.2282,
+        "bh": -0.1234,
         "n_trades": 2
       },
       "rsi": {
-        "sharpe": -1.288,
-        "ret": -0.0994,
-        "bh": -0.0416,
-        "n_trades": 3
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": -0.1234,
+        "n_trades": 0
       },
       "macd": {
-        "sharpe": 2.093,
-        "ret": 0.2233,
-        "bh": -0.0416,
-        "n_trades": 2
+        "sharpe": 1.948,
+        "ret": 0.2045,
+        "bh": -0.1234,
+        "n_trades": 4
       },
       "stoch": {
-        "sharpe": -0.661,
-        "ret": -0.05,
-        "bh": -0.0416,
-        "n_trades": 3
+        "sharpe": -4.143,
+        "ret": -0.2359,
+        "bh": -0.1234,
+        "n_trades": 1
       },
       "boll": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": -0.0416,
+        "bh": -0.1234,
         "n_trades": 0
       }
     },
     "composite_valid": {
-      "sharpe": 2.093,
-      "total_return": 0.2233,
-      "bh_total_return": -0.0416,
-      "max_drawdown": -0.1242,
-      "hit_rate": 1.0,
-      "n_trades": 2,
+      "sharpe": 1.948,
+      "total_return": 0.2045,
+      "bh_total_return": -0.1234,
+      "max_drawdown": -0.1093,
+      "hit_rate": 0.5,
+      "n_trades": 4,
       "beats_bh": true
     },
     "model": {
-      "auc": 0.595,
-      "skill": true,
-      "proba_up": 0.419,
-      "reason": "edge mesure"
+      "auc": 0.524,
+      "skill": false,
+      "proba_up": 0.596,
+      "reason": "AUC proche de 0.5 : pas d'edge fiable"
     },
-    "updated": "2026-09-20"
+    "updated": "2026-09-25"
   },
   "WBT": {
     "params": {
       "ma": {
-        "fast": 50,
-        "slow": 200
+        "fast": 10,
+        "slow": 30
       },
       "rsi": {
         "n": 21,
@@ -1199,65 +1199,65 @@
         "high": 80
       },
       "boll": {
-        "n": 30,
+        "n": 20,
         "k": 2.5
       }
     },
     "enabled": {
-      "ma": false,
-      "rsi": true,
+      "ma": true,
+      "rsi": false,
       "macd": true,
       "stoch": false,
       "boll": false
     },
     "valid": {
       "ma": {
-        "sharpe": 0.0,
-        "ret": 0.0,
-        "bh": 0.4445,
-        "n_trades": 0
-      },
-      "rsi": {
-        "sharpe": 4.585,
-        "ret": 0.5068,
-        "bh": 0.4445,
+        "sharpe": 2.929,
+        "ret": 0.1609,
+        "bh": 0.5103,
         "n_trades": 1
       },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.5103,
+        "n_trades": 0
+      },
       "macd": {
-        "sharpe": 3.631,
-        "ret": 0.369,
-        "bh": 0.4445,
-        "n_trades": 5
+        "sharpe": 2.817,
+        "ret": 0.2705,
+        "bh": 0.5103,
+        "n_trades": 7
       },
       "stoch": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.4445,
+        "bh": 0.5103,
         "n_trades": 0
       },
       "boll": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.4445,
+        "bh": 0.5103,
         "n_trades": 0
       }
     },
     "composite_valid": {
-      "sharpe": 3.631,
-      "total_return": 0.369,
-      "bh_total_return": 0.4445,
-      "max_drawdown": -0.0431,
-      "hit_rate": 0.5,
+      "sharpe": 3.399,
+      "total_return": 0.3497,
+      "bh_total_return": 0.5103,
+      "max_drawdown": -0.052,
+      "hit_rate": 0.0,
       "n_trades": 5,
       "beats_bh": false
     },
     "model": {
-      "auc": null,
+      "auc": 0.372,
       "skill": false,
-      "proba_up": null,
-      "reason": "donnees insuffisantes"
+      "proba_up": 0.447,
+      "reason": "AUC proche de 0.5 : pas d'edge fiable"
     },
-    "updated": "2026-09-20"
+    "updated": "2026-09-25"
   },
   "ADA": {
     "params": {
@@ -1298,50 +1298,50 @@
       "ma": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.3062,
+        "bh": 0.5928,
         "n_trades": 0
       },
       "rsi": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.3062,
+        "bh": 0.5928,
         "n_trades": 0
       },
       "macd": {
-        "sharpe": -5.87,
-        "ret": -0.2707,
-        "bh": 0.3062,
-        "n_trades": 6
+        "sharpe": -0.713,
+        "ret": -0.0755,
+        "bh": 0.5928,
+        "n_trades": 7
       },
       "stoch": {
-        "sharpe": 4.447,
-        "ret": 0.5235,
-        "bh": 0.3062,
-        "n_trades": 5
+        "sharpe": 4.58,
+        "ret": 0.5932,
+        "bh": 0.5928,
+        "n_trades": 6
       },
       "boll": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.3062,
+        "bh": 0.5928,
         "n_trades": 0
       }
     },
     "composite_valid": {
-      "sharpe": 4.447,
-      "total_return": 0.5235,
-      "bh_total_return": 0.3062,
+      "sharpe": 4.58,
+      "total_return": 0.5932,
+      "bh_total_return": 0.5928,
       "max_drawdown": -0.1129,
       "hit_rate": 1.0,
-      "n_trades": 5,
+      "n_trades": 6,
       "beats_bh": true
     },
     "model": {
-      "auc": 0.778,
+      "auc": 0.782,
       "skill": true,
-      "proba_up": 0.234,
+      "proba_up": 0.102,
       "reason": "edge mesure"
     },
-    "updated": "2026-09-20"
+    "updated": "2026-09-25"
   },
   "LEO": {
     "params": {
@@ -1351,8 +1351,8 @@
       },
       "rsi": {
         "n": 14,
-        "low": 30,
-        "high": 70
+        "low": 35,
+        "high": 65
       },
       "macd": {
         "fast": 19,
@@ -1382,50 +1382,50 @@
       "ma": {
         "sharpe": -1.449,
         "ret": -0.0104,
-        "bh": -0.0813,
+        "bh": -0.0859,
         "n_trades": 2
       },
       "rsi": {
-        "sharpe": -0.369,
-        "ret": -0.02,
-        "bh": -0.0813,
+        "sharpe": -1.642,
+        "ret": -0.0768,
+        "bh": -0.0859,
         "n_trades": 1
       },
       "macd": {
-        "sharpe": -1.999,
-        "ret": -0.0373,
-        "bh": -0.0813,
+        "sharpe": -1.85,
+        "ret": -0.0364,
+        "bh": -0.0859,
         "n_trades": 6
       },
       "stoch": {
-        "sharpe": -3.776,
-        "ret": -0.049,
-        "bh": -0.0813,
+        "sharpe": -3.411,
+        "ret": -0.0478,
+        "bh": -0.0859,
         "n_trades": 1
       },
       "boll": {
-        "sharpe": -1.169,
-        "ret": -0.0551,
-        "bh": -0.0813,
+        "sharpe": -1.131,
+        "ret": -0.0539,
+        "bh": -0.0859,
         "n_trades": 1
       }
     },
     "composite_valid": {
       "sharpe": 0.0,
       "total_return": 0.0,
-      "bh_total_return": -0.0813,
+      "bh_total_return": -0.0859,
       "max_drawdown": 0.0,
       "hit_rate": null,
       "n_trades": 0,
       "beats_bh": true
     },
     "model": {
-      "auc": 0.62,
+      "auc": 0.624,
       "skill": true,
-      "proba_up": 0.526,
+      "proba_up": 0.62,
       "reason": "edge mesure"
     },
-    "updated": "2026-09-20"
+    "updated": "2026-09-25"
   },
   "XLM": {
     "params": {
@@ -1466,42 +1466,42 @@
       "ma": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.0465,
+        "bh": 0.2654,
         "n_trades": 0
       },
       "rsi": {
-        "sharpe": 1.136,
-        "ret": 0.0547,
-        "bh": 0.0465,
+        "sharpe": 3.156,
+        "ret": 0.1597,
+        "bh": 0.2654,
         "n_trades": 2
       },
       "macd": {
-        "sharpe": 1.385,
-        "ret": 0.1048,
-        "bh": 0.0465,
+        "sharpe": 1.498,
+        "ret": 0.1234,
+        "bh": 0.2654,
         "n_trades": 11
       },
       "stoch": {
-        "sharpe": 2.951,
-        "ret": 0.2978,
-        "bh": 0.0465,
-        "n_trades": 3
+        "sharpe": 3.417,
+        "ret": 0.3907,
+        "bh": 0.2654,
+        "n_trades": 4
       },
       "boll": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.0465,
+        "bh": 0.2654,
         "n_trades": 0
       }
     },
     "composite_valid": {
-      "sharpe": 3.601,
-      "total_return": 0.2614,
-      "bh_total_return": 0.0465,
-      "max_drawdown": -0.0307,
-      "hit_rate": 1.0,
-      "n_trades": 2,
-      "beats_bh": true
+      "sharpe": 0.0,
+      "total_return": 0.0,
+      "bh_total_return": 0.2654,
+      "max_drawdown": 0.0,
+      "hit_rate": null,
+      "n_trades": 0,
+      "beats_bh": false
     },
     "model": {
       "auc": null,
@@ -1509,7 +1509,7 @@
       "proba_up": null,
       "reason": "donnees insuffisantes"
     },
-    "updated": "2026-09-20"
+    "updated": "2026-09-25"
   },
   "UNI": {
     "params": {
@@ -1543,57 +1543,57 @@
       "ma": true,
       "rsi": false,
       "macd": true,
-      "stoch": true,
+      "stoch": false,
       "boll": false
     },
     "valid": {
       "ma": {
-        "sharpe": 5.335,
-        "ret": 1.0278,
-        "bh": 1.2921,
+        "sharpe": 5.262,
+        "ret": 1.1404,
+        "bh": 1.4696,
         "n_trades": 1
       },
       "rsi": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 1.2921,
+        "bh": 1.4696,
         "n_trades": 0
       },
       "macd": {
-        "sharpe": 3.534,
-        "ret": 0.5625,
-        "bh": 1.2921,
-        "n_trades": 7
+        "sharpe": 3.976,
+        "ret": 0.7347,
+        "bh": 1.4696,
+        "n_trades": 5
       },
       "stoch": {
-        "sharpe": 3.239,
-        "ret": 0.2183,
-        "bh": 1.2921,
-        "n_trades": 2
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.4696,
+        "n_trades": 0
       },
       "boll": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 1.2921,
+        "bh": 1.4696,
         "n_trades": 0
       }
     },
     "composite_valid": {
-      "sharpe": 5.335,
-      "total_return": 1.0278,
-      "bh_total_return": 1.2921,
+      "sharpe": 5.214,
+      "total_return": 1.2542,
+      "bh_total_return": 1.4696,
       "max_drawdown": -0.1841,
-      "hit_rate": null,
-      "n_trades": 1,
+      "hit_rate": 1.0,
+      "n_trades": 3,
       "beats_bh": false
     },
     "model": {
-      "auc": 0.595,
+      "auc": 0.594,
       "skill": true,
-      "proba_up": 0.285,
+      "proba_up": 0.301,
       "reason": "edge mesure"
     },
-    "updated": "2026-09-20"
+    "updated": "2026-09-25"
   },
   "NEAR": {
     "params": {
@@ -1602,7 +1602,7 @@
         "slow": 100
       },
       "rsi": {
-        "n": 14,
+        "n": 21,
         "low": 25,
         "high": 75
       },
@@ -1625,7 +1625,7 @@
     },
     "enabled": {
       "ma": false,
-      "rsi": false,
+      "rsi": true,
       "macd": true,
       "stoch": true,
       "boll": false
@@ -1634,50 +1634,50 @@
       "ma": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.9203,
+        "bh": 1.7199,
         "n_trades": 0
       },
       "rsi": {
-        "sharpe": 0.0,
-        "ret": 0.0,
-        "bh": 0.9203,
-        "n_trades": 0
+        "sharpe": 5.497,
+        "ret": 1.2949,
+        "bh": 1.7199,
+        "n_trades": 2
       },
       "macd": {
-        "sharpe": 4.841,
-        "ret": 1.091,
-        "bh": 0.9203,
-        "n_trades": 3
+        "sharpe": 5.347,
+        "ret": 1.361,
+        "bh": 1.7199,
+        "n_trades": 5
       },
       "stoch": {
         "sharpe": 3.312,
         "ret": 0.2426,
-        "bh": 0.9203,
+        "bh": 1.7199,
         "n_trades": 2
       },
       "boll": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.9203,
+        "bh": 1.7199,
         "n_trades": 0
       }
     },
     "composite_valid": {
-      "sharpe": 4.841,
-      "total_return": 1.091,
-      "bh_total_return": 0.9203,
-      "max_drawdown": -0.0973,
-      "hit_rate": 0.0,
-      "n_trades": 3,
-      "beats_bh": true
+      "sharpe": 0.0,
+      "total_return": 0.0,
+      "bh_total_return": 1.7199,
+      "max_drawdown": 0.0,
+      "hit_rate": null,
+      "n_trades": 0,
+      "beats_bh": false
     },
     "model": {
-      "auc": 0.505,
+      "auc": 0.502,
       "skill": false,
-      "proba_up": 0.338,
+      "proba_up": 0.209,
       "reason": "AUC proche de 0.5 : pas d'edge fiable"
     },
-    "updated": "2026-09-20"
+    "updated": "2026-09-25"
   },
   "BCH": {
     "params": {
@@ -1709,6 +1709,426 @@
     },
     "enabled": {
       "ma": false,
+      "rsi": false,
+      "macd": true,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.5988,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.5988,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 2.179,
+        "ret": 0.353,
+        "bh": 0.5988,
+        "n_trades": 7
+      },
+      "stoch": {
+        "sharpe": 4.556,
+        "ret": 1.0375,
+        "bh": 0.5988,
+        "n_trades": 4
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.5988,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 2.179,
+      "total_return": 0.353,
+      "bh_total_return": 0.5988,
+      "max_drawdown": -0.1644,
+      "hit_rate": 0.333,
+      "n_trades": 7,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.539,
+      "skill": false,
+      "proba_up": 0.223,
+      "reason": "AUC proche de 0.5 : pas d'edge fiable"
+    },
+    "updated": "2026-09-25"
+  },
+  "LTC": {
+    "params": {
+      "ma": {
+        "fast": 50,
+        "slow": 200
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 25,
+        "high": 75
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": true,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.5634,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.5634,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 2.573,
+        "ret": 0.2439,
+        "bh": 0.5634,
+        "n_trades": 9
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.5634,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.5634,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 2.573,
+      "total_return": 0.2439,
+      "bh_total_return": 0.5634,
+      "max_drawdown": -0.1005,
+      "hit_rate": 0.5,
+      "n_trades": 9,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "CC": {
+    "params": {
+      "ma": {
+        "fast": 50,
+        "slow": 200
+      },
+      "rsi": {
+        "n": 7,
+        "low": 25,
+        "high": 75
+      },
+      "macd": {
+        "fast": 5,
+        "slow": 35,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": true,
+      "macd": false,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": -0.05,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 2.438,
+        "ret": 0.2883,
+        "bh": -0.05,
+        "n_trades": 3
+      },
+      "macd": {
+        "sharpe": 0.272,
+        "ret": -0.0007,
+        "bh": -0.05,
+        "n_trades": 11
+      },
+      "stoch": {
+        "sharpe": 2.781,
+        "ret": 0.3297,
+        "bh": -0.05,
+        "n_trades": 4
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": -0.05,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 0.992,
+      "total_return": 0.0823,
+      "bh_total_return": -0.05,
+      "max_drawdown": -0.2112,
+      "hit_rate": 1.0,
+      "n_trades": 4,
+      "beats_bh": true
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "AVAX": {
+    "params": {
+      "ma": {
+        "fast": 50,
+        "slow": 200
+      },
+      "rsi": {
+        "n": 21,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 19,
+        "slow": 39,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": true,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.5932,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.5932,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 0.394,
+        "ret": 0.0113,
+        "bh": 0.5932,
+        "n_trades": 7
+      },
+      "stoch": {
+        "sharpe": 5.459,
+        "ret": 0.8932,
+        "bh": 0.5932,
+        "n_trades": 6
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.5932,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 0.394,
+      "total_return": 0.0113,
+      "bh_total_return": 0.5932,
+      "max_drawdown": -0.0991,
+      "hit_rate": 0.333,
+      "n_trades": 7,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "SUI": {
+    "params": {
+      "ma": {
+        "fast": 50,
+        "slow": 200
+      },
+      "rsi": {
+        "n": 21,
+        "low": 25,
+        "high": 75
+      },
+      "macd": {
+        "fast": 8,
+        "slow": 21,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": true,
+      "stoch": true,
+      "boll": true
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.4895,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.4895,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 1.365,
+        "ret": 0.1267,
+        "bh": 0.4895,
+        "n_trades": 15
+      },
+      "stoch": {
+        "sharpe": 3.824,
+        "ret": 0.3667,
+        "bh": 0.4895,
+        "n_trades": 1
+      },
+      "boll": {
+        "sharpe": 2.436,
+        "ret": 0.0811,
+        "bh": 0.4895,
+        "n_trades": 2
+      }
+    },
+    "composite_valid": {
+      "sharpe": 0.0,
+      "total_return": 0.0,
+      "bh_total_return": 0.4895,
+      "max_drawdown": 0.0,
+      "hit_rate": null,
+      "n_trades": 0,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "HBAR": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 100
+      },
+      "rsi": {
+        "n": 7,
+        "low": 35,
+        "high": 65
+      },
+      "macd": {
+        "fast": 5,
+        "slow": 35,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 10,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
       "rsi": true,
       "macd": true,
       "stoch": true,
@@ -1718,49 +2138,8044 @@
       "ma": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.1591,
+        "bh": 0.367,
         "n_trades": 0
       },
       "rsi": {
-        "sharpe": 1.625,
-        "ret": 0.1985,
-        "bh": 0.1591,
+        "sharpe": 2.557,
+        "ret": 0.0609,
+        "bh": 0.367,
+        "n_trades": 2
+      },
+      "macd": {
+        "sharpe": 3.023,
+        "ret": 0.2571,
+        "bh": 0.367,
+        "n_trades": 9
+      },
+      "stoch": {
+        "sharpe": 4.162,
+        "ret": 0.2109,
+        "bh": 0.367,
+        "n_trades": 2
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.367,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 0.0,
+      "total_return": 0.0,
+      "bh_total_return": 0.367,
+      "max_drawdown": 0.0,
+      "hit_rate": null,
+      "n_trades": 0,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.724,
+      "skill": true,
+      "proba_up": 0.159,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "SHIB": {
+    "params": {
+      "ma": {
+        "fast": 50,
+        "slow": 200
+      },
+      "rsi": {
+        "n": 21,
+        "low": 25,
+        "high": 75
+      },
+      "macd": {
+        "fast": 19,
+        "slow": 39,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 10,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": true,
+      "macd": false,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.1943,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 2.41,
+        "ret": 0.2895,
+        "bh": 0.1943,
         "n_trades": 1
       },
       "macd": {
-        "sharpe": 0.679,
-        "ret": 0.0456,
-        "bh": 0.1591,
+        "sharpe": 0.253,
+        "ret": -0.008,
+        "bh": 0.1943,
         "n_trades": 5
       },
       "stoch": {
-        "sharpe": 3.674,
-        "ret": 0.5364,
-        "bh": 0.1591,
+        "sharpe": 2.976,
+        "ret": 0.3054,
+        "bh": 0.1943,
+        "n_trades": 4
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.1943,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 2.976,
+      "total_return": 0.3054,
+      "bh_total_return": 0.1943,
+      "max_drawdown": -0.0765,
+      "hit_rate": 1.0,
+      "n_trades": 4,
+      "beats_bh": true
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "TAO": {
+    "params": {
+      "ma": {
+        "fast": 10,
+        "slow": 30
+      },
+      "rsi": {
+        "n": 14,
+        "low": 35,
+        "high": 65
+      },
+      "macd": {
+        "fast": 8,
+        "slow": 21,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": false,
+      "macd": true,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 1.925,
+        "ret": 0.2318,
+        "bh": 0.5805,
+        "n_trades": 3
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.5805,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 0.883,
+        "ret": 0.0688,
+        "bh": 0.5805,
+        "n_trades": 9
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.5805,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.5805,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 2.386,
+      "total_return": 0.3327,
+      "bh_total_return": 0.5805,
+      "max_drawdown": -0.1802,
+      "hit_rate": 0.0,
+      "n_trades": 5,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.582,
+      "skill": true,
+      "proba_up": 0.372,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "BTW": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": true
+    },
+    "valid": {},
+    "composite_valid": {},
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "CRO": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 100
+      },
+      "rsi": {
+        "n": 14,
+        "low": 25,
+        "high": 75
+      },
+      "macd": {
+        "fast": 19,
+        "slow": 39,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.1305,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 2.978,
+        "ret": 0.3329,
+        "bh": 0.1305,
+        "n_trades": 1
+      },
+      "macd": {
+        "sharpe": 1.155,
+        "ret": 0.0879,
+        "bh": 0.1305,
+        "n_trades": 3
+      },
+      "stoch": {
+        "sharpe": 3.263,
+        "ret": 0.3447,
+        "bh": 0.1305,
+        "n_trades": 4
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.1305,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": -0.591,
+      "total_return": -0.0421,
+      "bh_total_return": 0.1305,
+      "max_drawdown": -0.0842,
+      "hit_rate": 0.0,
+      "n_trades": 2,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.756,
+      "skill": true,
+      "proba_up": 0.186,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "M": {
+    "params": {
+      "ma": {
+        "fast": 10,
+        "slow": 30
+      },
+      "rsi": {
+        "n": 14,
+        "low": 35,
+        "high": 65
+      },
+      "macd": {
+        "fast": 19,
+        "slow": 39,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 25,
+        "high": 75
+      },
+      "boll": {
+        "n": 10,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": true,
+      "macd": false,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": -0.089,
+        "ret": -0.0381,
+        "bh": 0.0368,
+        "n_trades": 3
+      },
+      "rsi": {
+        "sharpe": 3.086,
+        "ret": 0.3718,
+        "bh": 0.0368,
+        "n_trades": 2
+      },
+      "macd": {
+        "sharpe": -0.359,
+        "ret": -0.0862,
+        "bh": 0.0368,
+        "n_trades": 5
+      },
+      "stoch": {
+        "sharpe": 3.345,
+        "ret": 0.3791,
+        "bh": 0.0368,
+        "n_trades": 6
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.0368,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 3.892,
+      "total_return": 0.4606,
+      "bh_total_return": 0.0368,
+      "max_drawdown": -0.1733,
+      "hit_rate": 1.0,
+      "n_trades": 6,
+      "beats_bh": true
+    },
+    "model": {
+      "auc": 0.555,
+      "skill": true,
+      "proba_up": 0.512,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "XAUT": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 100
+      },
+      "rsi": {
+        "n": 21,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 5,
+        "slow": 35,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 10,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": true,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.0495,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.0495,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 0.281,
+        "ret": 0.0043,
+        "bh": 0.0495,
+        "n_trades": 8
+      },
+      "stoch": {
+        "sharpe": -2.602,
+        "ret": -0.0201,
+        "bh": 0.0495,
+        "n_trades": 1
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.0495,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 0.281,
+      "total_return": 0.0043,
+      "bh_total_return": 0.0495,
+      "max_drawdown": -0.0387,
+      "hit_rate": 0.5,
+      "n_trades": 8,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.546,
+      "skill": false,
+      "proba_up": 0.223,
+      "reason": "AUC proche de 0.5 : pas d'edge fiable"
+    },
+    "updated": "2026-09-25"
+  },
+  "ONDO": {
+    "params": {
+      "ma": {
+        "fast": 10,
+        "slow": 30
+      },
+      "rsi": {
+        "n": 7,
+        "low": 25,
+        "high": 75
+      },
+      "macd": {
+        "fast": 19,
+        "slow": 39,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 25,
+        "high": 75
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": false,
+      "macd": true,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.744,
+        "ret": 0.0523,
+        "bh": 0.3242,
+        "n_trades": 3
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.3242,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 0.394,
+        "ret": 0.0022,
+        "bh": 0.3242,
+        "n_trades": 7
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.3242,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.3242,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": -0.136,
+      "total_return": -0.0716,
+      "bh_total_return": 0.3242,
+      "max_drawdown": -0.2825,
+      "hit_rate": 0.0,
+      "n_trades": 5,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.604,
+      "skill": true,
+      "proba_up": 0.121,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "OKB": {
+    "params": {
+      "ma": {
+        "fast": 50,
+        "slow": 200
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 19,
+        "slow": 39,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 25,
+        "high": 75
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": true,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.3928,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.3928,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 2.039,
+        "ret": 0.1177,
+        "bh": 0.3928,
+        "n_trades": 5
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.3928,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.3928,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 2.039,
+      "total_return": 0.1177,
+      "bh_total_return": 0.3928,
+      "max_drawdown": -0.1225,
+      "hit_rate": 0.5,
+      "n_trades": 5,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "ENA": {
+    "params": {
+      "ma": {
+        "fast": 50,
+        "slow": 200
+      },
+      "rsi": {
+        "n": 7,
+        "low": 25,
+        "high": 75
+      },
+      "macd": {
+        "fast": 8,
+        "slow": 21,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": true,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.7337,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.7337,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 3.476,
+        "ret": 0.7718,
+        "bh": 1.7337,
+        "n_trades": 9
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.7337,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.7337,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 3.476,
+      "total_return": 0.7718,
+      "bh_total_return": 1.7337,
+      "max_drawdown": -0.1921,
+      "hit_rate": 0.25,
+      "n_trades": 9,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "RLUSD": {
+    "params": {
+      "ma": {
+        "fast": 50,
+        "slow": 200
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 10,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": false,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": -0.0001,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": -0.0001,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": -7.724,
+        "ret": -0.0097,
+        "bh": -0.0001,
+        "n_trades": 9
+      },
+      "stoch": {
+        "sharpe": -2.108,
+        "ret": -0.0009,
+        "bh": -0.0001,
+        "n_trades": 1
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": -0.0001,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 0.0,
+      "total_return": 0.0,
+      "bh_total_return": -0.0001,
+      "max_drawdown": 0.0,
+      "hit_rate": null,
+      "n_trades": 0,
+      "beats_bh": true
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "USYC": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": true
+    },
+    "valid": {},
+    "composite_valid": {},
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "BUIDL": {
+    "params": {
+      "ma": {
+        "fast": 10,
+        "slow": 30
+      },
+      "rsi": {
+        "n": 7,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 10,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": false,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.0,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": -2.466,
+        "ret": -0.001,
+        "bh": 0.0,
+        "n_trades": 1
+      },
+      "macd": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.0,
+        "n_trades": 0
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.0,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": -5.063,
+        "ret": -0.004,
+        "bh": 0.0,
+        "n_trades": 4
+      }
+    },
+    "composite_valid": {
+      "sharpe": 0.0,
+      "total_return": 0.0,
+      "bh_total_return": 0.0,
+      "max_drawdown": 0.0,
+      "hit_rate": null,
+      "n_trades": 0,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "USDY": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 7,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 19,
+        "slow": 39,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": false,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": -0.242,
+        "ret": -0.001,
+        "bh": 0.0075,
+        "n_trades": 1
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.0075,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": -4.921,
+        "ret": -0.0283,
+        "bh": 0.0075,
+        "n_trades": 12
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.0075,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.0075,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 0.0,
+      "total_return": 0.0,
+      "bh_total_return": 0.0075,
+      "max_drawdown": 0.0,
+      "hit_rate": null,
+      "n_trades": 0,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.623,
+      "skill": true,
+      "proba_up": 0.511,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "AAVE": {
+    "params": {
+      "ma": {
+        "fast": 10,
+        "slow": 30
+      },
+      "rsi": {
+        "n": 21,
+        "low": 25,
+        "high": 75
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 25,
+        "high": 75
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": false,
+      "macd": true,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 1.252,
+        "ret": 0.0813,
+        "bh": 0.5003,
+        "n_trades": 3
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.5003,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 2.074,
+        "ret": 0.254,
+        "bh": 0.5003,
+        "n_trades": 7
+      },
+      "stoch": {
+        "sharpe": 4.48,
+        "ret": 0.7294,
+        "bh": 0.5003,
+        "n_trades": 6
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.5003,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 1.094,
+      "total_return": 0.0683,
+      "bh_total_return": 0.5003,
+      "max_drawdown": -0.127,
+      "hit_rate": 1.0,
+      "n_trades": 3,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.605,
+      "skill": true,
+      "proba_up": 0.432,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "MNT": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 100
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 19,
+        "slow": 39,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": true,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.6925,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.6925,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 3.66,
+        "ret": 0.3969,
+        "bh": 0.6925,
+        "n_trades": 5
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.6925,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.6925,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 3.66,
+      "total_return": 0.3969,
+      "bh_total_return": 0.6925,
+      "max_drawdown": -0.1269,
+      "hit_rate": 0.5,
+      "n_trades": 5,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.678,
+      "skill": true,
+      "proba_up": 0.342,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "DOT": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 100
+      },
+      "rsi": {
+        "n": 21,
+        "low": 25,
+        "high": 75
+      },
+      "macd": {
+        "fast": 8,
+        "slow": 21,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 10,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": true,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.5235,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.5235,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 2.242,
+        "ret": 0.2641,
+        "bh": 0.5235,
+        "n_trades": 8
+      },
+      "stoch": {
+        "sharpe": 3.587,
+        "ret": 0.2168,
+        "bh": 0.5235,
+        "n_trades": 2
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.5235,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 2.242,
+      "total_return": 0.2641,
+      "bh_total_return": 0.5235,
+      "max_drawdown": -0.2083,
+      "hit_rate": 1.0,
+      "n_trades": 8,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.7,
+      "skill": true,
+      "proba_up": 0.293,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "ASTER": {
+    "params": {
+      "ma": {
+        "fast": 50,
+        "slow": 200
+      },
+      "rsi": {
+        "n": 7,
+        "low": 35,
+        "high": 65
+      },
+      "macd": {
+        "fast": 5,
+        "slow": 35,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": true,
+      "macd": true,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.1428,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 3.516,
+        "ret": 0.1223,
+        "bh": 0.1428,
+        "n_trades": 2
+      },
+      "macd": {
+        "sharpe": 0.944,
+        "ret": 0.0553,
+        "bh": 0.1428,
+        "n_trades": 12
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.1428,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.1428,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 0.99,
+      "total_return": 0.0589,
+      "bh_total_return": 0.1428,
+      "max_drawdown": -0.0876,
+      "hit_rate": 0.333,
+      "n_trades": 12,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "MORPHO": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 100
+      },
+      "rsi": {
+        "n": 7,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 8,
+        "slow": 21,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.4496,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 3.201,
+        "ret": 0.1955,
+        "bh": 0.4496,
+        "n_trades": 2
+      },
+      "macd": {
+        "sharpe": 2.632,
+        "ret": 0.3542,
+        "bh": 0.4496,
+        "n_trades": 5
+      },
+      "stoch": {
+        "sharpe": 2.816,
+        "ret": 0.1822,
+        "bh": 0.4496,
+        "n_trades": 2
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.4496,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 0.0,
+      "total_return": 0.0,
+      "bh_total_return": 0.4496,
+      "max_drawdown": 0.0,
+      "hit_rate": null,
+      "n_trades": 0,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.541,
+      "skill": false,
+      "proba_up": 0.207,
+      "reason": "AUC proche de 0.5 : pas d'edge fiable"
+    },
+    "updated": "2026-09-25"
+  },
+  "PUMP": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 7,
+        "low": 25,
+        "high": 75
+      },
+      "macd": {
+        "fast": 19,
+        "slow": 39,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 25,
+        "high": 75
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": false,
+      "macd": true,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.798,
+        "ret": 0.0448,
+        "bh": 0.8198,
+        "n_trades": 1
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.8198,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 4.108,
+        "ret": 1.0228,
+        "bh": 0.8198,
+        "n_trades": 2
+      },
+      "stoch": {
+        "sharpe": 0.416,
+        "ret": 0.0103,
+        "bh": 0.8198,
+        "n_trades": 2
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.8198,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 0.0,
+      "total_return": 0.0,
+      "bh_total_return": 0.8198,
+      "max_drawdown": 0.0,
+      "hit_rate": null,
+      "n_trades": 0,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.47,
+      "skill": false,
+      "proba_up": 0.436,
+      "reason": "AUC proche de 0.5 : pas d'edge fiable"
+    },
+    "updated": "2026-09-25"
+  },
+  "PAXG": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 100
+      },
+      "rsi": {
+        "n": 21,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 5,
+        "slow": 35,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 10,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": true,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.0483,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.0483,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 1.922,
+        "ret": 0.0531,
+        "bh": 0.0483,
+        "n_trades": 10
+      },
+      "stoch": {
+        "sharpe": -2.601,
+        "ret": -0.02,
+        "bh": 0.0483,
+        "n_trades": 1
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.0483,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 1.922,
+      "total_return": 0.0531,
+      "bh_total_return": 0.0483,
+      "max_drawdown": -0.0393,
+      "hit_rate": 0.4,
+      "n_trades": 10,
+      "beats_bh": true
+    },
+    "model": {
+      "auc": 0.531,
+      "skill": false,
+      "proba_up": 0.242,
+      "reason": "AUC proche de 0.5 : pas d'edge fiable"
+    },
+    "updated": "2026-09-25"
+  },
+  "PEPE": {
+    "params": {
+      "ma": {
+        "fast": 10,
+        "slow": 30
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 5,
+        "slow": 35,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": -1.679,
+        "ret": -0.1634,
+        "bh": 0.5655,
+        "n_trades": 3
+      },
+      "rsi": {
+        "sharpe": 2.909,
+        "ret": 0.1958,
+        "bh": 0.5655,
+        "n_trades": 2
+      },
+      "macd": {
+        "sharpe": 2.854,
+        "ret": 0.4889,
+        "bh": 0.5655,
+        "n_trades": 7
+      },
+      "stoch": {
+        "sharpe": 5.174,
+        "ret": 1.1904,
+        "bh": 0.5655,
+        "n_trades": 4
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.5655,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 0.0,
+      "total_return": 0.0,
+      "bh_total_return": 0.5655,
+      "max_drawdown": 0.0,
+      "hit_rate": null,
+      "n_trades": 0,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.534,
+      "skill": false,
+      "proba_up": 0.364,
+      "reason": "AUC proche de 0.5 : pas d'edge fiable"
+    },
+    "updated": "2026-09-25"
+  },
+  "WLFI": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 21,
+        "low": 25,
+        "high": 75
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 25,
+        "high": 75
+      },
+      "boll": {
+        "n": 10,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": false,
+      "stoch": true,
+      "boll": true
+    },
+    "valid": {
+      "ma": {
+        "sharpe": -0.544,
+        "ret": -0.0241,
+        "bh": 0.0339,
+        "n_trades": 2
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.0339,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": -0.942,
+        "ret": -0.0582,
+        "bh": 0.0339,
+        "n_trades": 6
+      },
+      "stoch": {
+        "sharpe": 2.749,
+        "ret": 0.118,
+        "bh": 0.0339,
+        "n_trades": 4
+      },
+      "boll": {
+        "sharpe": 1.009,
+        "ret": 0.0561,
+        "bh": 0.0339,
+        "n_trades": 1
+      }
+    },
+    "composite_valid": {
+      "sharpe": 3.135,
+      "total_return": 0.157,
+      "bh_total_return": 0.0339,
+      "max_drawdown": -0.0713,
+      "hit_rate": 0.5,
+      "n_trades": 5,
+      "beats_bh": true
+    },
+    "model": {
+      "auc": 0.512,
+      "skill": false,
+      "proba_up": 0.438,
+      "reason": "AUC proche de 0.5 : pas d'edge fiable"
+    },
+    "updated": "2026-09-25"
+  },
+  "SKY": {
+    "params": {
+      "ma": {
+        "fast": 10,
+        "slow": 30
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 8,
+        "slow": 21,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": true,
+      "stoch": false,
+      "boll": true
+    },
+    "valid": {
+      "ma": {
+        "sharpe": -0.714,
+        "ret": -0.0586,
+        "bh": 0.3129,
+        "n_trades": 3
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.3129,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 2.892,
+        "ret": 0.2155,
+        "bh": 0.3129,
+        "n_trades": 7
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.3129,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 2.1,
+        "ret": 0.1694,
+        "bh": 0.3129,
+        "n_trades": 1
+      }
+    },
+    "composite_valid": {
+      "sharpe": 2.892,
+      "total_return": 0.2155,
+      "bh_total_return": 0.3129,
+      "max_drawdown": -0.0794,
+      "hit_rate": 0.333,
+      "n_trades": 7,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.549,
+      "skill": false,
+      "proba_up": 0.51,
+      "reason": "AUC proche de 0.5 : pas d'edge fiable"
+    },
+    "updated": "2026-09-25"
+  },
+  "ICP": {
+    "params": {
+      "ma": {
+        "fast": 50,
+        "slow": 200
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 5,
+        "slow": 35,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": true,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.4731,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.4731,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 1.625,
+        "ret": 0.1348,
+        "bh": 0.4731,
+        "n_trades": 13
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.4731,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.4731,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 1.625,
+      "total_return": 0.1348,
+      "bh_total_return": 0.4731,
+      "max_drawdown": -0.1313,
+      "hit_rate": 0.5,
+      "n_trades": 13,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "WLD": {
+    "params": {
+      "ma": {
+        "fast": 10,
+        "slow": 30
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 19,
+        "slow": 39,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": false,
+      "macd": false,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.837,
+        "ret": 0.0601,
+        "bh": 0.3461,
+        "n_trades": 3
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.3461,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 0.21,
+        "ret": -0.028,
+        "bh": 0.3461,
+        "n_trades": 5
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.3461,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.3461,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 0.837,
+      "total_return": 0.0601,
+      "bh_total_return": 0.3461,
+      "max_drawdown": -0.2408,
+      "hit_rate": 1.0,
+      "n_trades": 3,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.635,
+      "skill": true,
+      "proba_up": 0.279,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "HTX": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 21,
+        "low": 35,
+        "high": 65
+      },
+      "macd": {
+        "fast": 5,
+        "slow": 35,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": false,
+      "stoch": true,
+      "boll": true
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": -0.0294,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": -0.715,
+        "ret": -0.0302,
+        "bh": -0.0294,
+        "n_trades": 1
+      },
+      "macd": {
+        "sharpe": -0.542,
+        "ret": -0.0159,
+        "bh": -0.0294,
+        "n_trades": 7
+      },
+      "stoch": {
+        "sharpe": 2.953,
+        "ret": 0.0733,
+        "bh": -0.0294,
+        "n_trades": 1
+      },
+      "boll": {
+        "sharpe": 0.456,
+        "ret": 0.011,
+        "bh": -0.0294,
+        "n_trades": 1
+      }
+    },
+    "composite_valid": {
+      "sharpe": 0.456,
+      "total_return": 0.011,
+      "bh_total_return": -0.0294,
+      "max_drawdown": -0.0655,
+      "hit_rate": null,
+      "n_trades": 1,
+      "beats_bh": true
+    },
+    "model": {
+      "auc": 0.523,
+      "skill": false,
+      "proba_up": 0.726,
+      "reason": "AUC proche de 0.5 : pas d'edge fiable"
+    },
+    "updated": "2026-09-25"
+  },
+  "ARB": {
+    "params": {
+      "ma": {
+        "fast": 50,
+        "slow": 200
+      },
+      "rsi": {
+        "n": 21,
+        "low": 25,
+        "high": 75
+      },
+      "macd": {
+        "fast": 5,
+        "slow": 35,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": true,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.8109,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.8109,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 2.92,
+        "ret": 0.6568,
+        "bh": 1.8109,
+        "n_trades": 9
+      },
+      "stoch": {
+        "sharpe": 4.144,
+        "ret": 0.7309,
+        "bh": 1.8109,
+        "n_trades": 4
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.8109,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 2.92,
+      "total_return": 0.6568,
+      "bh_total_return": 1.8109,
+      "max_drawdown": -0.2123,
+      "hit_rate": 0.5,
+      "n_trades": 9,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "U": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": true
+    },
+    "valid": {},
+    "composite_valid": {},
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "EURSAFO": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": true
+    },
+    "valid": {},
+    "composite_valid": {},
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "ETC": {
+    "params": {
+      "ma": {
+        "fast": 50,
+        "slow": 200
+      },
+      "rsi": {
+        "n": 21,
+        "low": 25,
+        "high": 75
+      },
+      "macd": {
+        "fast": 19,
+        "slow": 39,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 10,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": true,
+      "macd": true,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.3818,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 3.517,
+        "ret": 0.5148,
+        "bh": 0.3818,
+        "n_trades": 1
+      },
+      "macd": {
+        "sharpe": 1.833,
+        "ret": 0.1939,
+        "bh": 0.3818,
+        "n_trades": 3
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.3818,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.3818,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 1.833,
+      "total_return": 0.1939,
+      "bh_total_return": 0.3818,
+      "max_drawdown": -0.1389,
+      "hit_rate": 1.0,
+      "n_trades": 3,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "VVV": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 14,
+        "low": 35,
+        "high": 65
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 25,
+        "high": 75
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": false,
+      "macd": true,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 3.089,
+        "ret": 0.3419,
+        "bh": 1.3819,
+        "n_trades": 1
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.3819,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 3.398,
+        "ret": 0.5943,
+        "bh": 1.3819,
+        "n_trades": 3
+      },
+      "stoch": {
+        "sharpe": 2.438,
+        "ret": 0.4326,
+        "bh": 1.3819,
+        "n_trades": 4
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.3819,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 3.089,
+      "total_return": 0.3419,
+      "bh_total_return": 1.3819,
+      "max_drawdown": -0.077,
+      "hit_rate": null,
+      "n_trades": 1,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.538,
+      "skill": false,
+      "proba_up": 0.464,
+      "reason": "AUC proche de 0.5 : pas d'edge fiable"
+    },
+    "updated": "2026-09-25"
+  },
+  "USDGO": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": true
+    },
+    "valid": {},
+    "composite_valid": {},
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "QNT": {
+    "params": {
+      "ma": {
+        "fast": 50,
+        "slow": 200
+      },
+      "rsi": {
+        "n": 7,
+        "low": 25,
+        "high": 75
+      },
+      "macd": {
+        "fast": 8,
+        "slow": 21,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.4673,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 2.436,
+        "ret": 0.1164,
+        "bh": 0.4673,
+        "n_trades": 2
+      },
+      "macd": {
+        "sharpe": 2.796,
+        "ret": 0.3843,
+        "bh": 0.4673,
+        "n_trades": 7
+      },
+      "stoch": {
+        "sharpe": 3.653,
+        "ret": 0.5536,
+        "bh": 0.4673,
         "n_trades": 3
       },
       "boll": {
         "sharpe": 0.0,
         "ret": 0.0,
-        "bh": 0.1591,
+        "bh": 0.4673,
         "n_trades": 0
       }
     },
     "composite_valid": {
-      "sharpe": 0.145,
-      "total_return": 0.0018,
-      "bh_total_return": 0.1591,
-      "max_drawdown": -0.0432,
+      "sharpe": 0.0,
+      "total_return": 0.0,
+      "bh_total_return": 0.4673,
+      "max_drawdown": 0.0,
+      "hit_rate": null,
+      "n_trades": 0,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "BGB": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 100
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 19,
+        "slow": 39,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 10,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": false,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.1793,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.1793,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 0.136,
+        "ret": -0.0011,
+        "bh": 0.1793,
+        "n_trades": 6
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.1793,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.1793,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 0.0,
+      "total_return": 0.0,
+      "bh_total_return": 0.1793,
+      "max_drawdown": 0.0,
+      "hit_rate": null,
+      "n_trades": 0,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.498,
+      "skill": false,
+      "proba_up": 0.292,
+      "reason": "AUC proche de 0.5 : pas d'edge fiable"
+    },
+    "updated": "2026-09-25"
+  },
+  "USDF": {
+    "params": {
+      "ma": {
+        "fast": 50,
+        "slow": 200
+      },
+      "rsi": {
+        "n": 21,
+        "low": 25,
+        "high": 75
+      },
+      "macd": {
+        "fast": 8,
+        "slow": 21,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": false,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.0001,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.0001,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": -4.475,
+        "ret": -0.006,
+        "bh": 0.0001,
+        "n_trades": 6
+      },
+      "stoch": {
+        "sharpe": -3.302,
+        "ret": -0.0014,
+        "bh": 0.0001,
+        "n_trades": 1
+      },
+      "boll": {
+        "sharpe": -1.912,
+        "ret": -0.0011,
+        "bh": 0.0001,
+        "n_trades": 1
+      }
+    },
+    "composite_valid": {
+      "sharpe": 0.0,
+      "total_return": 0.0,
+      "bh_total_return": 0.0001,
+      "max_drawdown": 0.0,
+      "hit_rate": null,
+      "n_trades": 0,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "BFUSD": {
+    "params": {
+      "ma": {
+        "fast": 50,
+        "slow": 200
+      },
+      "rsi": {
+        "n": 14,
+        "low": 25,
+        "high": 75
+      },
+      "macd": {
+        "fast": 19,
+        "slow": 39,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 10,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": false,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.001,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.001,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": -1.391,
+        "ret": -0.0014,
+        "bh": 0.001,
+        "n_trades": 2
+      },
+      "stoch": {
+        "sharpe": -2.32,
+        "ret": -0.001,
+        "bh": 0.001,
+        "n_trades": 1
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.001,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 0.0,
+      "total_return": 0.0,
+      "bh_total_return": 0.001,
+      "max_drawdown": 0.0,
+      "hit_rate": null,
+      "n_trades": 0,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "POL": {
+    "params": {
+      "ma": {
+        "fast": 50,
+        "slow": 200
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 5,
+        "slow": 35,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 25,
+        "high": 75
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": true,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.4767,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.4767,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 3.335,
+        "ret": 0.4167,
+        "bh": 0.4767,
+        "n_trades": 7
+      },
+      "stoch": {
+        "sharpe": 0.581,
+        "ret": 0.0266,
+        "bh": 0.4767,
+        "n_trades": 2
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.4767,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 3.335,
+      "total_return": 0.4167,
+      "bh_total_return": 0.4767,
+      "max_drawdown": -0.1194,
+      "hit_rate": 1.0,
+      "n_trades": 7,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "LIT": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": true
+    },
+    "valid": {},
+    "composite_valid": {},
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "KAS": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 7,
+        "low": 35,
+        "high": 65
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 25,
+        "high": 75
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 1.968,
+        "ret": 0.1431,
+        "bh": 0.4168,
+        "n_trades": 1
+      },
+      "rsi": {
+        "sharpe": 0.979,
+        "ret": 0.0318,
+        "bh": 0.4168,
+        "n_trades": 2
+      },
+      "macd": {
+        "sharpe": 1.999,
+        "ret": 0.1917,
+        "bh": 0.4168,
+        "n_trades": 5
+      },
+      "stoch": {
+        "sharpe": 3.133,
+        "ret": 0.1308,
+        "bh": 0.4168,
+        "n_trades": 2
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.4168,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 2.823,
+      "total_return": 0.2096,
+      "bh_total_return": 0.4168,
+      "max_drawdown": -0.109,
+      "hit_rate": null,
+      "n_trades": 1,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.678,
+      "skill": true,
+      "proba_up": 0.14,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "GT": {
+    "params": {
+      "ma": {
+        "fast": 50,
+        "slow": 200
+      },
+      "rsi": {
+        "n": 21,
+        "low": 25,
+        "high": 75
+      },
+      "macd": {
+        "fast": 19,
+        "slow": 39,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 10,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": true,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.6411,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.6411,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 5.88,
+        "ret": 0.581,
+        "bh": 0.6411,
+        "n_trades": 3
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.6411,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.6411,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 5.88,
+      "total_return": 0.581,
+      "bh_total_return": 0.6411,
+      "max_drawdown": -0.0426,
+      "hit_rate": 0.0,
+      "n_trades": 3,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "JUP": {
+    "params": {
+      "ma": {
+        "fast": 10,
+        "slow": 30
+      },
+      "rsi": {
+        "n": 14,
+        "low": 35,
+        "high": 65
+      },
+      "macd": {
+        "fast": 8,
+        "slow": 21,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": false,
+      "macd": true,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 2.631,
+        "ret": 0.425,
+        "bh": 0.6629,
+        "n_trades": 1
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.6629,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 0.929,
+        "ret": 0.0642,
+        "bh": 0.6629,
+        "n_trades": 7
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.6629,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.6629,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 3.36,
+      "total_return": 0.6322,
+      "bh_total_return": 0.6629,
+      "max_drawdown": -0.2157,
+      "hit_rate": 0.0,
+      "n_trades": 3,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.547,
+      "skill": false,
+      "proba_up": 0.409,
+      "reason": "AUC proche de 0.5 : pas d'edge fiable"
+    },
+    "updated": "2026-09-25"
+  },
+  "ALGO": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 14,
+        "low": 35,
+        "high": 65
+      },
+      "macd": {
+        "fast": 5,
+        "slow": 35,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": false,
+      "macd": true,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 2.447,
+        "ret": 0.1778,
+        "bh": 0.415,
+        "n_trades": 1
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.415,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 1.679,
+        "ret": 0.149,
+        "bh": 0.415,
+        "n_trades": 7
+      },
+      "stoch": {
+        "sharpe": 2.918,
+        "ret": 0.1798,
+        "bh": 0.415,
+        "n_trades": 2
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.415,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 2.692,
+      "total_return": 0.1553,
+      "bh_total_return": 0.415,
+      "max_drawdown": -0.0731,
+      "hit_rate": null,
+      "n_trades": 1,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.571,
+      "skill": true,
+      "proba_up": 0.219,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "PI": {
+    "params": {
+      "ma": {
+        "fast": 10,
+        "slow": 30
+      },
+      "rsi": {
+        "n": 21,
+        "low": 35,
+        "high": 65
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": false,
+      "stoch": true,
+      "boll": true
+    },
+    "valid": {
+      "ma": {
+        "sharpe": -0.772,
+        "ret": -0.0533,
+        "bh": 0.1201,
+        "n_trades": 2
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.1201,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": -0.549,
+        "ret": -0.0594,
+        "bh": 0.1201,
+        "n_trades": 8
+      },
+      "stoch": {
+        "sharpe": 1.383,
+        "ret": 0.0645,
+        "bh": 0.1201,
+        "n_trades": 3
+      },
+      "boll": {
+        "sharpe": 0.829,
+        "ret": 0.0249,
+        "bh": 0.1201,
+        "n_trades": 1
+      }
+    },
+    "composite_valid": {
+      "sharpe": 1.274,
+      "total_return": 0.0634,
+      "bh_total_return": 0.1201,
+      "max_drawdown": -0.1081,
+      "hit_rate": 1.0,
+      "n_trades": 3,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.499,
+      "skill": false,
+      "proba_up": 0.475,
+      "reason": "AUC proche de 0.5 : pas d'edge fiable"
+    },
+    "updated": "2026-09-25"
+  },
+  "KCS": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 100
+      },
+      "rsi": {
+        "n": 21,
+        "low": 25,
+        "high": 75
+      },
+      "macd": {
+        "fast": 19,
+        "slow": 39,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 25,
+        "high": 75
+      },
+      "boll": {
+        "n": 10,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": false,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.0933,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.0933,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": -0.764,
+        "ret": -0.0486,
+        "bh": 0.0933,
+        "n_trades": 5
+      },
+      "stoch": {
+        "sharpe": 1.755,
+        "ret": 0.0482,
+        "bh": 0.0933,
+        "n_trades": 2
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.0933,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 1.755,
+      "total_return": 0.0482,
+      "bh_total_return": 0.0933,
+      "max_drawdown": -0.0605,
       "hit_rate": 1.0,
       "n_trades": 2,
       "beats_bh": false
     },
     "model": {
-      "auc": 0.625,
+      "auc": 0.718,
       "skill": true,
-      "proba_up": 0.336,
+      "proba_up": 0.094,
       "reason": "edge mesure"
     },
-    "updated": "2026-09-20"
+    "updated": "2026-09-25"
+  },
+  "RENDER": {
+    "params": {
+      "ma": {
+        "fast": 50,
+        "slow": 200
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 8,
+        "slow": 21,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 25,
+        "high": 75
+      },
+      "boll": {
+        "n": 10,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": true,
+      "stoch": true,
+      "boll": true
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.3148,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.3148,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 2.966,
+        "ret": 0.2779,
+        "bh": 0.3148,
+        "n_trades": 7
+      },
+      "stoch": {
+        "sharpe": 3.765,
+        "ret": 0.29,
+        "bh": 0.3148,
+        "n_trades": 1
+      },
+      "boll": {
+        "sharpe": 2.439,
+        "ret": 0.0858,
+        "bh": 0.3148,
+        "n_trades": 2
+      }
+    },
+    "composite_valid": {
+      "sharpe": 0.0,
+      "total_return": 0.0,
+      "bh_total_return": 0.3148,
+      "max_drawdown": 0.0,
+      "hit_rate": null,
+      "n_trades": 0,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "BCAP": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 21,
+        "low": 25,
+        "high": 75
+      },
+      "macd": {
+        "fast": 8,
+        "slow": 21,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": false,
+      "macd": false,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 2.307,
+        "ret": 0.0088,
+        "bh": 0.0125,
+        "n_trades": 1
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.0125,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": -6.415,
+        "ret": -0.012,
+        "bh": 0.0125,
+        "n_trades": 9
+      },
+      "stoch": {
+        "sharpe": 0.84,
+        "ret": 0.001,
+        "bh": 0.0125,
+        "n_trades": 2
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.0125,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 2.884,
+      "total_return": 0.0113,
+      "bh_total_return": 0.0125,
+      "max_drawdown": -0.001,
+      "hit_rate": null,
+      "n_trades": 1,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.639,
+      "skill": true,
+      "proba_up": 0.31,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "JST": {
+    "params": {
+      "ma": {
+        "fast": 10,
+        "slow": 30
+      },
+      "rsi": {
+        "n": 7,
+        "low": 35,
+        "high": 65
+      },
+      "macd": {
+        "fast": 19,
+        "slow": 39,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 10,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": true,
+      "macd": false,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.094,
+        "ret": -0.0011,
+        "bh": 0.1021,
+        "n_trades": 3
+      },
+      "rsi": {
+        "sharpe": 3.424,
+        "ret": 0.1479,
+        "bh": 0.1021,
+        "n_trades": 4
+      },
+      "macd": {
+        "sharpe": -0.651,
+        "ret": -0.0367,
+        "bh": 0.1021,
+        "n_trades": 5
+      },
+      "stoch": {
+        "sharpe": 1.684,
+        "ret": 0.0492,
+        "bh": 0.1021,
+        "n_trades": 2
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.1021,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 3.424,
+      "total_return": 0.1479,
+      "bh_total_return": 0.1021,
+      "max_drawdown": -0.062,
+      "hit_rate": 1.0,
+      "n_trades": 4,
+      "beats_bh": true
+    },
+    "model": {
+      "auc": 0.691,
+      "skill": true,
+      "proba_up": 0.668,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "ATOM": {
+    "params": {
+      "ma": {
+        "fast": 50,
+        "slow": 200
+      },
+      "rsi": {
+        "n": 14,
+        "low": 25,
+        "high": 75
+      },
+      "macd": {
+        "fast": 5,
+        "slow": 35,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 25,
+        "high": 75
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": true,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.3727,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.3727,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 1.148,
+        "ret": 0.0872,
+        "bh": 0.3727,
+        "n_trades": 9
+      },
+      "stoch": {
+        "sharpe": 3.039,
+        "ret": 0.1959,
+        "bh": 0.3727,
+        "n_trades": 2
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.3727,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 1.148,
+      "total_return": 0.0872,
+      "bh_total_return": 0.3727,
+      "max_drawdown": -0.1498,
+      "hit_rate": 0.75,
+      "n_trades": 9,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "CAKE": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 100
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 25,
+        "high": 75
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": true,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.9891,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.9891,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 4.737,
+        "ret": 0.6165,
+        "bh": 0.9891,
+        "n_trades": 7
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.9891,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.9891,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 4.737,
+      "total_return": 0.6165,
+      "bh_total_return": 0.9891,
+      "max_drawdown": -0.0767,
+      "hit_rate": 0.333,
+      "n_trades": 7,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.669,
+      "skill": true,
+      "proba_up": 0.478,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "NEXO": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 100
+      },
+      "rsi": {
+        "n": 14,
+        "low": 25,
+        "high": 75
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": true,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.1899,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.1899,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 1.045,
+        "ret": 0.0523,
+        "bh": 0.1899,
+        "n_trades": 7
+      },
+      "stoch": {
+        "sharpe": 3.303,
+        "ret": 0.2203,
+        "bh": 0.1899,
+        "n_trades": 4
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.1899,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 1.045,
+      "total_return": 0.0523,
+      "bh_total_return": 0.1899,
+      "max_drawdown": -0.0529,
+      "hit_rate": 0.333,
+      "n_trades": 7,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.664,
+      "skill": true,
+      "proba_up": 0.289,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "FIL": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 14,
+        "low": 25,
+        "high": 75
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": false,
+      "macd": true,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.878,
+        "ret": 0.0574,
+        "bh": 0.4268,
+        "n_trades": 1
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.4268,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 0.986,
+        "ret": 0.0847,
+        "bh": 0.4268,
+        "n_trades": 7
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.4268,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.4268,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 0.986,
+      "total_return": 0.0847,
+      "bh_total_return": 0.4268,
+      "max_drawdown": -0.1754,
+      "hit_rate": 0.0,
+      "n_trades": 7,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.589,
+      "skill": true,
+      "proba_up": 0.304,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "AKE": {
+    "params": {
+      "ma": {
+        "fast": 50,
+        "slow": 200
+      },
+      "rsi": {
+        "n": 7,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": true,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 7.8705,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 7.8705,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 1.802,
+        "ret": 0.3024,
+        "bh": 7.8705,
+        "n_trades": 9
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 7.8705,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 7.8705,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 1.802,
+      "total_return": 0.3024,
+      "bh_total_return": 7.8705,
+      "max_drawdown": -0.4473,
+      "hit_rate": 0.25,
+      "n_trades": 9,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "INJ": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 100
+      },
+      "rsi": {
+        "n": 21,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": true,
+      "macd": false,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.7023,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 4.607,
+        "ret": 0.971,
+        "bh": 0.7023,
+        "n_trades": 1
+      },
+      "macd": {
+        "sharpe": 0.068,
+        "ret": -0.037,
+        "bh": 0.7023,
+        "n_trades": 7
+      },
+      "stoch": {
+        "sharpe": 3.94,
+        "ret": 0.5092,
+        "bh": 0.7023,
+        "n_trades": 4
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.7023,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 3.94,
+      "total_return": 0.5092,
+      "bh_total_return": 0.7023,
+      "max_drawdown": -0.1251,
+      "hit_rate": 1.0,
+      "n_trades": 4,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.406,
+      "skill": false,
+      "proba_up": 0.552,
+      "reason": "AUC proche de 0.5 : pas d'edge fiable"
+    },
+    "updated": "2026-09-25"
+  },
+  "VET": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 100
+      },
+      "rsi": {
+        "n": 7,
+        "low": 35,
+        "high": 65
+      },
+      "macd": {
+        "fast": 8,
+        "slow": 21,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.0482,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 2.377,
+        "ret": 0.0944,
+        "bh": 1.0482,
+        "n_trades": 2
+      },
+      "macd": {
+        "sharpe": 2.058,
+        "ret": 0.2254,
+        "bh": 1.0482,
+        "n_trades": 11
+      },
+      "stoch": {
+        "sharpe": 3.95,
+        "ret": 0.2708,
+        "bh": 1.0482,
+        "n_trades": 2
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.0482,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 0.0,
+      "total_return": 0.0,
+      "bh_total_return": 1.0482,
+      "max_drawdown": 0.0,
+      "hit_rate": null,
+      "n_trades": 0,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.716,
+      "skill": true,
+      "proba_up": 0.291,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "DASH": {
+    "params": {
+      "ma": {
+        "fast": 50,
+        "slow": 200
+      },
+      "rsi": {
+        "n": 7,
+        "low": 25,
+        "high": 75
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 25,
+        "high": 75
+      },
+      "boll": {
+        "n": 10,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": true,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.0353,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.0353,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 2.914,
+        "ret": 0.5775,
+        "bh": 1.0353,
+        "n_trades": 6
+      },
+      "stoch": {
+        "sharpe": 3.902,
+        "ret": 0.3618,
+        "bh": 1.0353,
+        "n_trades": 2
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.0353,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 2.914,
+      "total_return": 0.5775,
+      "bh_total_return": 1.0353,
+      "max_drawdown": -0.2425,
+      "hit_rate": 0.333,
+      "n_trades": 6,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "AERO": {
+    "params": {
+      "ma": {
+        "fast": 10,
+        "slow": 30
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 19,
+        "slow": 39,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": false,
+      "macd": true,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 2.926,
+        "ret": 0.3474,
+        "bh": 0.5824,
+        "n_trades": 1
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.5824,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 2.818,
+        "ret": 0.3866,
+        "bh": 0.5824,
+        "n_trades": 5
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.5824,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.5824,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 3.294,
+      "total_return": 0.4873,
+      "bh_total_return": 0.5824,
+      "max_drawdown": -0.1494,
+      "hit_rate": 0.0,
+      "n_trades": 3,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.486,
+      "skill": false,
+      "proba_up": 0.283,
+      "reason": "AUC proche de 0.5 : pas d'edge fiable"
+    },
+    "updated": "2026-09-25"
+  },
+  "EUTBL": {
+    "params": {
+      "ma": {
+        "fast": 50,
+        "slow": 200
+      },
+      "rsi": {
+        "n": 21,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 5,
+        "slow": 35,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 25,
+        "high": 75
+      },
+      "boll": {
+        "n": 10,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": true,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.0037,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": -3.303,
+        "ret": -0.0015,
+        "bh": 0.0037,
+        "n_trades": 1
+      },
+      "macd": {
+        "sharpe": 1.262,
+        "ret": 0.0063,
+        "bh": 0.0037,
+        "n_trades": 8
+      },
+      "stoch": {
+        "sharpe": -3.365,
+        "ret": -0.0113,
+        "bh": 0.0037,
+        "n_trades": 3
+      },
+      "boll": {
+        "sharpe": -4.031,
+        "ret": -0.0176,
+        "bh": 0.0037,
+        "n_trades": 1
+      }
+    },
+    "composite_valid": {
+      "sharpe": 1.262,
+      "total_return": 0.0063,
+      "bh_total_return": 0.0037,
+      "max_drawdown": -0.0095,
+      "hit_rate": 0.75,
+      "n_trades": 8,
+      "beats_bh": true
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "USTB": {
+    "params": {
+      "ma": {
+        "fast": 10,
+        "slow": 30
+      },
+      "rsi": {
+        "n": 7,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 19,
+        "slow": 39,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 10,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": false,
+      "macd": true,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 3.809,
+        "ret": 0.0019,
+        "bh": 0.0059,
+        "n_trades": 1
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.0059,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 8.641,
+        "ret": 0.0046,
+        "bh": 0.0059,
+        "n_trades": 1
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.0059,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.0059,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 8.641,
+      "total_return": 0.0046,
+      "bh_total_return": 0.0059,
+      "max_drawdown": -0.001,
+      "hit_rate": null,
+      "n_trades": 1,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "APT": {
+    "params": {
+      "ma": {
+        "fast": 50,
+        "slow": 200
+      },
+      "rsi": {
+        "n": 7,
+        "low": 25,
+        "high": 75
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 25,
+        "high": 75
+      },
+      "boll": {
+        "n": 10,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": true,
+      "macd": false,
+      "stoch": true,
+      "boll": true
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.3667,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 3.11,
+        "ret": 0.1944,
+        "bh": 0.3667,
+        "n_trades": 2
+      },
+      "macd": {
+        "sharpe": -1.569,
+        "ret": -0.157,
+        "bh": 0.3667,
+        "n_trades": 7
+      },
+      "stoch": {
+        "sharpe": 4.43,
+        "ret": 0.683,
+        "bh": 0.3667,
+        "n_trades": 6
+      },
+      "boll": {
+        "sharpe": 3.282,
+        "ret": 0.3345,
+        "bh": 0.3667,
+        "n_trades": 2
+      }
+    },
+    "composite_valid": {
+      "sharpe": 0.0,
+      "total_return": 0.0,
+      "bh_total_return": 0.3667,
+      "max_drawdown": 0.0,
+      "hit_rate": null,
+      "n_trades": 0,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "STABLE": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": true
+    },
+    "valid": {},
+    "composite_valid": {},
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "GHO": {
+    "params": {
+      "ma": {
+        "fast": 50,
+        "slow": 200
+      },
+      "rsi": {
+        "n": 7,
+        "low": 25,
+        "high": 75
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": false,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.0003,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": -0.275,
+        "ret": -0.0002,
+        "bh": 0.0003,
+        "n_trades": 2
+      },
+      "macd": {
+        "sharpe": -6.869,
+        "ret": -0.0095,
+        "bh": 0.0003,
+        "n_trades": 8
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.0003,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.0003,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 0.0,
+      "total_return": 0.0,
+      "bh_total_return": 0.0003,
+      "max_drawdown": 0.0,
+      "hit_rate": null,
+      "n_trades": 0,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "ETHFI": {
+    "params": {
+      "ma": {
+        "fast": 10,
+        "slow": 30
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 25,
+        "high": 75
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": false,
+      "macd": false,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 1.982,
+        "ret": 0.2228,
+        "bh": 0.6455,
+        "n_trades": 1
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.6455,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": -0.133,
+        "ret": -0.0563,
+        "bh": 0.6455,
+        "n_trades": 8
+      },
+      "stoch": {
+        "sharpe": 1.556,
+        "ret": 0.1013,
+        "bh": 0.6455,
+        "n_trades": 2
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.6455,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 1.652,
+      "total_return": 0.1725,
+      "bh_total_return": 0.6455,
+      "max_drawdown": -0.1766,
+      "hit_rate": null,
+      "n_trades": 1,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.642,
+      "skill": true,
+      "proba_up": 0.438,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "FLR": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 7,
+        "low": 35,
+        "high": 65
+      },
+      "macd": {
+        "fast": 19,
+        "slow": 39,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": true,
+      "macd": false,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 2.243,
+        "ret": 0.0823,
+        "bh": 0.1426,
+        "n_trades": 1
+      },
+      "rsi": {
+        "sharpe": 2.732,
+        "ret": 0.1457,
+        "bh": 0.1426,
+        "n_trades": 4
+      },
+      "macd": {
+        "sharpe": -1.053,
+        "ret": -0.0946,
+        "bh": 0.1426,
+        "n_trades": 9
+      },
+      "stoch": {
+        "sharpe": 3.903,
+        "ret": 0.3274,
+        "bh": 0.1426,
+        "n_trades": 4
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.1426,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 2.066,
+      "total_return": 0.0714,
+      "bh_total_return": 0.1426,
+      "max_drawdown": -0.013,
+      "hit_rate": 1.0,
+      "n_trades": 2,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.631,
+      "skill": true,
+      "proba_up": 0.207,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "BDX": {
+    "params": {
+      "ma": {
+        "fast": 10,
+        "slow": 30
+      },
+      "rsi": {
+        "n": 7,
+        "low": 25,
+        "high": 75
+      },
+      "macd": {
+        "fast": 19,
+        "slow": 39,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": false,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": -0.0566,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": -0.704,
+        "ret": -0.0095,
+        "bh": -0.0566,
+        "n_trades": 1
+      },
+      "macd": {
+        "sharpe": -0.67,
+        "ret": -0.0356,
+        "bh": -0.0566,
+        "n_trades": 5
+      },
+      "stoch": {
+        "sharpe": -1.746,
+        "ret": -0.0237,
+        "bh": -0.0566,
+        "n_trades": 1
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": -0.0566,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 0.0,
+      "total_return": 0.0,
+      "bh_total_return": -0.0566,
+      "max_drawdown": 0.0,
+      "hit_rate": null,
+      "n_trades": 0,
+      "beats_bh": true
+    },
+    "model": {
+      "auc": 0.58,
+      "skill": true,
+      "proba_up": 0.54,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "PENGU": {
+    "params": {
+      "ma": {
+        "fast": 10,
+        "slow": 30
+      },
+      "rsi": {
+        "n": 21,
+        "low": 35,
+        "high": 65
+      },
+      "macd": {
+        "fast": 8,
+        "slow": 21,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": true,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": -4.233,
+        "ret": -0.2299,
+        "bh": 0.6317,
+        "n_trades": 2
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.6317,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 3.553,
+        "ret": 0.6329,
+        "bh": 0.6317,
+        "n_trades": 9
+      },
+      "stoch": {
+        "sharpe": 3.724,
+        "ret": 0.3371,
+        "bh": 0.6317,
+        "n_trades": 1
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.6317,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 3.553,
+      "total_return": 0.6329,
+      "bh_total_return": 0.6317,
+      "max_drawdown": -0.0862,
+      "hit_rate": 0.25,
+      "n_trades": 9,
+      "beats_bh": true
+    },
+    "model": {
+      "auc": 0.483,
+      "skill": false,
+      "proba_up": 0.182,
+      "reason": "AUC proche de 0.5 : pas d'edge fiable"
+    },
+    "updated": "2026-09-25"
+  },
+  "XDC": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 100
+      },
+      "rsi": {
+        "n": 7,
+        "low": 25,
+        "high": 75
+      },
+      "macd": {
+        "fast": 19,
+        "slow": 39,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 25,
+        "high": 75
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": true,
+      "macd": false,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.1085,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 3.462,
+        "ret": 0.0986,
+        "bh": 0.1085,
+        "n_trades": 2
+      },
+      "macd": {
+        "sharpe": -1.05,
+        "ret": -0.0562,
+        "bh": 0.1085,
+        "n_trades": 5
+      },
+      "stoch": {
+        "sharpe": 1.929,
+        "ret": 0.1003,
+        "bh": 0.1085,
+        "n_trades": 2
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.1085,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 2.63,
+      "total_return": 0.137,
+      "bh_total_return": 0.1085,
+      "max_drawdown": -0.0732,
+      "hit_rate": 1.0,
+      "n_trades": 4,
+      "beats_bh": true
+    },
+    "model": {
+      "auc": 0.688,
+      "skill": true,
+      "proba_up": 0.109,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "STX": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 100
+      },
+      "rsi": {
+        "n": 21,
+        "low": 25,
+        "high": 75
+      },
+      "macd": {
+        "fast": 8,
+        "slow": 21,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 25,
+        "high": 75
+      },
+      "boll": {
+        "n": 10,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": true,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.3358,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.3358,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 3.833,
+        "ret": 0.7724,
+        "bh": 1.3358,
+        "n_trades": 5
+      },
+      "stoch": {
+        "sharpe": 3.995,
+        "ret": 0.733,
+        "bh": 1.3358,
+        "n_trades": 2
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.3358,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 3.833,
+      "total_return": 0.7724,
+      "bh_total_return": 1.3358,
+      "max_drawdown": -0.151,
+      "hit_rate": 0.5,
+      "n_trades": 5,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.531,
+      "skill": false,
+      "proba_up": 0.283,
+      "reason": "AUC proche de 0.5 : pas d'edge fiable"
+    },
+    "updated": "2026-09-25"
+  },
+  "TRUMP": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 7,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 8,
+        "slow": 21,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 25,
+        "high": 75
+      },
+      "boll": {
+        "n": 10,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": true
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.684,
+        "ret": 0.0339,
+        "bh": 0.3574,
+        "n_trades": 1
+      },
+      "rsi": {
+        "sharpe": 2.013,
+        "ret": 0.2115,
+        "bh": 0.3574,
+        "n_trades": 2
+      },
+      "macd": {
+        "sharpe": 1.942,
+        "ret": 0.2903,
+        "bh": 0.3574,
+        "n_trades": 5
+      },
+      "stoch": {
+        "sharpe": 2.626,
+        "ret": 0.5077,
+        "bh": 0.3574,
+        "n_trades": 3
+      },
+      "boll": {
+        "sharpe": 2.439,
+        "ret": 0.2654,
+        "bh": 0.3574,
+        "n_trades": 2
+      }
+    },
+    "composite_valid": {
+      "sharpe": -0.298,
+      "total_return": -0.0323,
+      "bh_total_return": 0.3574,
+      "max_drawdown": -0.1234,
+      "hit_rate": 0.0,
+      "n_trades": 3,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.656,
+      "skill": true,
+      "proba_up": 0.15,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "JAAA": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": true
+    },
+    "valid": {},
+    "composite_valid": {},
+    "model": {
+      "auc": 0.718,
+      "skill": true,
+      "proba_up": 0.94,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "PYTH": {
+    "params": {
+      "ma": {
+        "fast": 50,
+        "slow": 200
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 8,
+        "slow": 21,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": true,
+      "macd": true,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.543,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 4.444,
+        "ret": 0.5739,
+        "bh": 0.543,
+        "n_trades": 2
+      },
+      "macd": {
+        "sharpe": 2.283,
+        "ret": 0.2184,
+        "bh": 0.543,
+        "n_trades": 9
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.543,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.543,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 2.813,
+      "total_return": 0.3038,
+      "bh_total_return": 0.543,
+      "max_drawdown": -0.116,
+      "hit_rate": 0.667,
+      "n_trades": 7,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "RAY": {
+    "params": {
+      "ma": {
+        "fast": 50,
+        "slow": 200
+      },
+      "rsi": {
+        "n": 7,
+        "low": 35,
+        "high": 65
+      },
+      "macd": {
+        "fast": 19,
+        "slow": 39,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 25,
+        "high": 75
+      },
+      "boll": {
+        "n": 10,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": true,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 2.49,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 2.49,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 5.591,
+        "ret": 2.2439,
+        "bh": 2.49,
+        "n_trades": 5
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 2.49,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 2.49,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 5.591,
+      "total_return": 2.2439,
+      "bh_total_return": 2.49,
+      "max_drawdown": -0.2621,
+      "hit_rate": 0.5,
+      "n_trades": 5,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "FET": {
+    "params": {
+      "ma": {
+        "fast": 50,
+        "slow": 200
+      },
+      "rsi": {
+        "n": 21,
+        "low": 35,
+        "high": 65
+      },
+      "macd": {
+        "fast": 5,
+        "slow": 35,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 25,
+        "high": 75
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": true
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.5897,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 4.093,
+        "ret": 0.8424,
+        "bh": 0.5897,
+        "n_trades": 2
+      },
+      "macd": {
+        "sharpe": 2.427,
+        "ret": 0.3687,
+        "bh": 0.5897,
+        "n_trades": 7
+      },
+      "stoch": {
+        "sharpe": 2.947,
+        "ret": 0.3416,
+        "bh": 0.5897,
+        "n_trades": 4
+      },
+      "boll": {
+        "sharpe": 3.985,
+        "ret": 0.407,
+        "bh": 0.5897,
+        "n_trades": 2
+      }
+    },
+    "composite_valid": {
+      "sharpe": 1.551,
+      "total_return": 0.141,
+      "bh_total_return": 0.5897,
+      "max_drawdown": -0.137,
+      "hit_rate": 1.0,
+      "n_trades": 2,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "USD0": {
+    "params": {
+      "ma": {
+        "fast": 50,
+        "slow": 200
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": false,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": -0.0024,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": -1.266,
+        "ret": -0.0022,
+        "bh": -0.0024,
+        "n_trades": 1
+      },
+      "macd": {
+        "sharpe": -6.284,
+        "ret": -0.0129,
+        "bh": -0.0024,
+        "n_trades": 8
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": -0.0024,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": -0.721,
+        "ret": -0.001,
+        "bh": -0.0024,
+        "n_trades": 1
+      }
+    },
+    "composite_valid": {
+      "sharpe": 0.0,
+      "total_return": 0.0,
+      "bh_total_return": -0.0024,
+      "max_drawdown": 0.0,
+      "hit_rate": null,
+      "n_trades": 0,
+      "beats_bh": true
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "ZRO": {
+    "params": {
+      "ma": {
+        "fast": 50,
+        "slow": 200
+      },
+      "rsi": {
+        "n": 7,
+        "low": 35,
+        "high": 65
+      },
+      "macd": {
+        "fast": 5,
+        "slow": 35,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 10,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.6154,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 3.006,
+        "ret": 0.1801,
+        "bh": 0.6154,
+        "n_trades": 2
+      },
+      "macd": {
+        "sharpe": 3.723,
+        "ret": 0.5928,
+        "bh": 0.6154,
+        "n_trades": 7
+      },
+      "stoch": {
+        "sharpe": 5.859,
+        "ret": 1.0474,
+        "bh": 0.6154,
+        "n_trades": 4
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.6154,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 3.397,
+      "total_return": 0.3917,
+      "bh_total_return": 0.6154,
+      "max_drawdown": -0.1192,
+      "hit_rate": 1.0,
+      "n_trades": 2,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "STONK": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": true
+    },
+    "valid": {},
+    "composite_valid": {},
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "AI": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": true
+    },
+    "valid": {},
+    "composite_valid": {},
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "BULLA": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 7,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 5,
+        "slow": 35,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": false,
+      "macd": true,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 1.92,
+        "ret": 0.3963,
+        "bh": 6.4424,
+        "n_trades": 1
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 6.4424,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 2.716,
+        "ret": 2.3377,
+        "bh": 6.4424,
+        "n_trades": 8
+      },
+      "stoch": {
+        "sharpe": 2.396,
+        "ret": 0.6238,
+        "bh": 6.4424,
+        "n_trades": 2
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 6.4424,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": -0.468,
+      "total_return": -0.1012,
+      "bh_total_return": 6.4424,
+      "max_drawdown": -0.2136,
+      "hit_rate": null,
+      "n_trades": 1,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.732,
+      "skill": true,
+      "proba_up": 0.429,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "PONS": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": true
+    },
+    "valid": {},
+    "composite_valid": {},
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "BP": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": true
+    },
+    "valid": {},
+    "composite_valid": {},
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "USELESS": {
+    "params": {
+      "ma": {
+        "fast": 10,
+        "slow": 30
+      },
+      "rsi": {
+        "n": 7,
+        "low": 35,
+        "high": 65
+      },
+      "macd": {
+        "fast": 19,
+        "slow": 39,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": false,
+      "macd": true,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 4.769,
+        "ret": 3.5801,
+        "bh": 3.9837,
+        "n_trades": 1
+      },
+      "rsi": {
+        "sharpe": 0.348,
+        "ret": -0.0056,
+        "bh": 3.9837,
+        "n_trades": 2
+      },
+      "macd": {
+        "sharpe": 5.458,
+        "ret": 5.4029,
+        "bh": 3.9837,
+        "n_trades": 1
+      },
+      "stoch": {
+        "sharpe": 3.728,
+        "ret": 0.7275,
+        "bh": 3.9837,
+        "n_trades": 2
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 3.9837,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 4.484,
+      "total_return": 3.0792,
+      "bh_total_return": 3.9837,
+      "max_drawdown": -0.3098,
+      "hit_rate": null,
+      "n_trades": 1,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.53,
+      "skill": false,
+      "proba_up": 0.378,
+      "reason": "AUC proche de 0.5 : pas d'edge fiable"
+    },
+    "updated": "2026-09-25"
+  },
+  "龙虾": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": true
+    },
+    "valid": {},
+    "composite_valid": {},
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "BR": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 21,
+        "low": 35,
+        "high": 65
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 10,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": false,
+      "macd": true,
+      "stoch": true,
+      "boll": true
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 2.194,
+        "ret": 0.8235,
+        "bh": 5.7267,
+        "n_trades": 1
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 5.7267,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 1.933,
+        "ret": 0.3792,
+        "bh": 5.7267,
+        "n_trades": 7
+      },
+      "stoch": {
+        "sharpe": 4.266,
+        "ret": 7.1692,
+        "bh": 5.7267,
+        "n_trades": 2
+      },
+      "boll": {
+        "sharpe": 2.589,
+        "ret": 0.8503,
+        "bh": 5.7267,
+        "n_trades": 2
+      }
+    },
+    "composite_valid": {
+      "sharpe": 3.107,
+      "total_return": 2.8587,
+      "bh_total_return": 5.7267,
+      "max_drawdown": -0.1807,
+      "hit_rate": null,
+      "n_trades": 1,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.58,
+      "skill": true,
+      "proba_up": 0.469,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "DRV": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 100
+      },
+      "rsi": {
+        "n": 14,
+        "low": 35,
+        "high": 65
+      },
+      "macd": {
+        "fast": 5,
+        "slow": 35,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 25,
+        "high": 75
+      },
+      "boll": {
+        "n": 10,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": true,
+      "macd": true,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 3.2806,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 2.917,
+        "ret": 0.3891,
+        "bh": 3.2806,
+        "n_trades": 2
+      },
+      "macd": {
+        "sharpe": 2.705,
+        "ret": 0.7706,
+        "bh": 3.2806,
+        "n_trades": 11
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 3.2806,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 3.2806,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 0.804,
+      "total_return": 0.0532,
+      "bh_total_return": 3.2806,
+      "max_drawdown": -0.2599,
+      "hit_rate": 0.25,
+      "n_trades": 8,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.603,
+      "skill": true,
+      "proba_up": 0.377,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "MARSCOIN": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": true
+    },
+    "valid": {},
+    "composite_valid": {},
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "MINA": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 100
+      },
+      "rsi": {
+        "n": 7,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": true,
+      "macd": true,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 2.3656,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 2.45,
+        "ret": 0.1458,
+        "bh": 2.3656,
+        "n_trades": 2
+      },
+      "macd": {
+        "sharpe": 6.014,
+        "ret": 1.7469,
+        "bh": 2.3656,
+        "n_trades": 3
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 2.3656,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 2.3656,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 6.055,
+      "total_return": 1.7659,
+      "bh_total_return": 2.3656,
+      "max_drawdown": -0.2424,
+      "hit_rate": 1.0,
+      "n_trades": 3,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.716,
+      "skill": true,
+      "proba_up": 0.212,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "KMNO": {
+    "params": {
+      "ma": {
+        "fast": 50,
+        "slow": 200
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 19,
+        "slow": 39,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 25,
+        "high": 75
+      },
+      "boll": {
+        "n": 10,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": true,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.1048,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.1048,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 3.236,
+        "ret": 0.5547,
+        "bh": 1.1048,
+        "n_trades": 7
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.1048,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.1048,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 3.236,
+      "total_return": 0.5547,
+      "bh_total_return": 1.1048,
+      "max_drawdown": -0.2022,
+      "hit_rate": 0.333,
+      "n_trades": 7,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "AIOZ": {
+    "params": {
+      "ma": {
+        "fast": 10,
+        "slow": 30
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": false,
+      "macd": true,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 3.739,
+        "ret": 1.2488,
+        "bh": 1.4752,
+        "n_trades": 1
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.4752,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 2.571,
+        "ret": 0.6563,
+        "bh": 1.4752,
+        "n_trades": 9
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.4752,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.4752,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 3.77,
+      "total_return": 1.2988,
+      "bh_total_return": 1.4752,
+      "max_drawdown": -0.1726,
+      "hit_rate": 0.0,
+      "n_trades": 5,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.623,
+      "skill": true,
+      "proba_up": 0.094,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "AR": {
+    "params": {
+      "ma": {
+        "fast": 50,
+        "slow": 200
+      },
+      "rsi": {
+        "n": 7,
+        "low": 35,
+        "high": 65
+      },
+      "macd": {
+        "fast": 19,
+        "slow": 39,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 25,
+        "high": 75
+      },
+      "boll": {
+        "n": 10,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": true,
+      "macd": true,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.4875,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 3.429,
+        "ret": 0.1587,
+        "bh": 1.4875,
+        "n_trades": 2
+      },
+      "macd": {
+        "sharpe": 3.344,
+        "ret": 0.6105,
+        "bh": 1.4875,
+        "n_trades": 5
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.4875,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.4875,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 2.365,
+      "total_return": 0.3083,
+      "bh_total_return": 1.4875,
+      "max_drawdown": -0.175,
+      "hit_rate": 0.5,
+      "n_trades": 4,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "ZAMA": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": true
+    },
+    "valid": {},
+    "composite_valid": {},
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "DBR": {
+    "params": {
+      "ma": {
+        "fast": 10,
+        "slow": 30
+      },
+      "rsi": {
+        "n": 21,
+        "low": 35,
+        "high": 65
+      },
+      "macd": {
+        "fast": 19,
+        "slow": 39,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 25,
+        "high": 75
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 4.087,
+        "ret": 0.6453,
+        "bh": 0.7986,
+        "n_trades": 3
+      },
+      "rsi": {
+        "sharpe": 3.529,
+        "ret": 0.3689,
+        "bh": 0.7986,
+        "n_trades": 2
+      },
+      "macd": {
+        "sharpe": 3.775,
+        "ret": 0.6059,
+        "bh": 0.7986,
+        "n_trades": 5
+      },
+      "stoch": {
+        "sharpe": 1.347,
+        "ret": 0.0204,
+        "bh": 0.7986,
+        "n_trades": 2
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.7986,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 3.943,
+      "total_return": 0.6274,
+      "bh_total_return": 0.7986,
+      "max_drawdown": -0.0825,
+      "hit_rate": 0.0,
+      "n_trades": 3,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.653,
+      "skill": true,
+      "proba_up": 0.003,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "SKR": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": true
+    },
+    "valid": {},
+    "composite_valid": {},
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "GRASS": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 7,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 8,
+        "slow": 21,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 3.852,
+        "ret": 0.3229,
+        "bh": 0.2967,
+        "n_trades": 1
+      },
+      "rsi": {
+        "sharpe": 2.128,
+        "ret": 0.3182,
+        "bh": 0.2967,
+        "n_trades": 2
+      },
+      "macd": {
+        "sharpe": 0.911,
+        "ret": 0.068,
+        "bh": 0.2967,
+        "n_trades": 7
+      },
+      "stoch": {
+        "sharpe": 4.015,
+        "ret": 0.719,
+        "bh": 0.2967,
+        "n_trades": 4
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.2967,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 3.583,
+      "total_return": 0.2622,
+      "bh_total_return": 0.2967,
+      "max_drawdown": -0.0264,
+      "hit_rate": null,
+      "n_trades": 1,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.556,
+      "skill": true,
+      "proba_up": 0.226,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "牛来": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": true
+    },
+    "valid": {},
+    "composite_valid": {},
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "HNT": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 100
+      },
+      "rsi": {
+        "n": 7,
+        "low": 35,
+        "high": 65
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 10,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": true,
+      "macd": true,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.7642,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 3.835,
+        "ret": 0.2437,
+        "bh": 1.7642,
+        "n_trades": 4
+      },
+      "macd": {
+        "sharpe": 2.86,
+        "ret": 1.3595,
+        "bh": 1.7642,
+        "n_trades": 4
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.7642,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.7642,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 3.0,
+      "total_return": 1.5192,
+      "bh_total_return": 1.7642,
+      "max_drawdown": -0.3754,
+      "hit_rate": 0.5,
+      "n_trades": 4,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.576,
+      "skill": true,
+      "proba_up": 0.501,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "PEAQ": {
+    "params": {
+      "ma": {
+        "fast": 10,
+        "slow": 30
+      },
+      "rsi": {
+        "n": 14,
+        "low": 25,
+        "high": 75
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 25,
+        "high": 75
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": true,
+      "macd": true,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 4.008,
+        "ret": 1.0295,
+        "bh": 1.3292,
+        "n_trades": 1
+      },
+      "rsi": {
+        "sharpe": 4.319,
+        "ret": 1.1506,
+        "bh": 1.3292,
+        "n_trades": 2
+      },
+      "macd": {
+        "sharpe": 3.214,
+        "ret": 0.7074,
+        "bh": 1.3292,
+        "n_trades": 5
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.3292,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.3292,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 4.631,
+      "total_return": 1.4609,
+      "bh_total_return": 1.3292,
+      "max_drawdown": -0.2376,
+      "hit_rate": null,
+      "n_trades": 1,
+      "beats_bh": true
+    },
+    "model": {
+      "auc": 0.583,
+      "skill": true,
+      "proba_up": 0.236,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "SEI": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 100
+      },
+      "rsi": {
+        "n": 7,
+        "low": 35,
+        "high": 65
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.4854,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 5.468,
+        "ret": 0.3261,
+        "bh": 0.4854,
+        "n_trades": 4
+      },
+      "macd": {
+        "sharpe": 1.346,
+        "ret": 0.1061,
+        "bh": 0.4854,
+        "n_trades": 7
+      },
+      "stoch": {
+        "sharpe": 3.925,
+        "ret": 0.3198,
+        "bh": 0.4854,
+        "n_trades": 2
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.4854,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 0.0,
+      "total_return": 0.0,
+      "bh_total_return": 0.4854,
+      "max_drawdown": 0.0,
+      "hit_rate": null,
+      "n_trades": 0,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.723,
+      "skill": true,
+      "proba_up": 0.049,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "SENT": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": true
+    },
+    "valid": {},
+    "composite_valid": {},
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "PLUME": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 7,
+        "low": 35,
+        "high": 65
+      },
+      "macd": {
+        "fast": 19,
+        "slow": 39,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": true,
+      "macd": true,
+      "stoch": false,
+      "boll": true
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 3.843,
+        "ret": 0.3779,
+        "bh": 0.5825,
+        "n_trades": 1
+      },
+      "rsi": {
+        "sharpe": 2.786,
+        "ret": 0.1789,
+        "bh": 0.5825,
+        "n_trades": 2
+      },
+      "macd": {
+        "sharpe": 1.625,
+        "ret": 0.1676,
+        "bh": 0.5825,
+        "n_trades": 5
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.5825,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 2.786,
+        "ret": 0.1789,
+        "bh": 0.5825,
+        "n_trades": 2
+      }
+    },
+    "composite_valid": {
+      "sharpe": 4.527,
+      "total_return": 0.4481,
+      "bh_total_return": 0.5825,
+      "max_drawdown": -0.0383,
+      "hit_rate": null,
+      "n_trades": 1,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.517,
+      "skill": false,
+      "proba_up": 0.273,
+      "reason": "AUC proche de 0.5 : pas d'edge fiable"
+    },
+    "updated": "2026-09-25"
+  },
+  "MET": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 100
+      },
+      "rsi": {
+        "n": 14,
+        "low": 25,
+        "high": 75
+      },
+      "macd": {
+        "fast": 5,
+        "slow": 35,
+        "signal": 5
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": true,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.0349,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.0349,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 2.467,
+        "ret": 0.3496,
+        "bh": 1.0349,
+        "n_trades": 9
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.0349,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.0349,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 2.467,
+      "total_return": 0.3496,
+      "bh_total_return": 1.0349,
+      "max_drawdown": -0.2425,
+      "hit_rate": 0.25,
+      "n_trades": 9,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": null,
+      "skill": false,
+      "proba_up": null,
+      "reason": "donnees insuffisantes"
+    },
+    "updated": "2026-09-25"
+  },
+  "SUPER": {
+    "params": {
+      "ma": {
+        "fast": 10,
+        "slow": 30
+      },
+      "rsi": {
+        "n": 21,
+        "low": 25,
+        "high": 75
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": false,
+      "macd": true,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 4.519,
+        "ret": 0.5574,
+        "bh": 1.1182,
+        "n_trades": 1
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.1182,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 4.31,
+        "ret": 0.539,
+        "bh": 1.1182,
+        "n_trades": 9
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.1182,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 1.1182,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 5.586,
+      "total_return": 0.9614,
+      "bh_total_return": 1.1182,
+      "max_drawdown": -0.1148,
+      "hit_rate": 0.0,
+      "n_trades": 5,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.573,
+      "skill": true,
+      "proba_up": 0.164,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "PIEVERSE": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 14,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 14,
+        "d": 3,
+        "smooth": 3,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": true
+    },
+    "valid": {},
+    "composite_valid": {},
+    "model": {
+      "auc": 0.675,
+      "skill": true,
+      "proba_up": 0.243,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "GRT": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 100
+      },
+      "rsi": {
+        "n": 7,
+        "low": 35,
+        "high": 65
+      },
+      "macd": {
+        "fast": 19,
+        "slow": 39,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 20,
+        "high": 80
+      },
+      "boll": {
+        "n": 10,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": true,
+      "macd": true,
+      "stoch": false,
+      "boll": true
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.7148,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 1.398,
+        "ret": 0.0578,
+        "bh": 0.7148,
+        "n_trades": 2
+      },
+      "macd": {
+        "sharpe": 3.615,
+        "ret": 0.4674,
+        "bh": 0.7148,
+        "n_trades": 3
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.7148,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 2.026,
+        "ret": 0.085,
+        "bh": 0.7148,
+        "n_trades": 2
+      }
+    },
+    "composite_valid": {
+      "sharpe": 0.0,
+      "total_return": 0.0,
+      "bh_total_return": 0.7148,
+      "max_drawdown": 0.0,
+      "hit_rate": null,
+      "n_trades": 0,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.641,
+      "skill": true,
+      "proba_up": 0.076,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "ZK": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 100
+      },
+      "rsi": {
+        "n": 21,
+        "low": 30,
+        "high": 70
+      },
+      "macd": {
+        "fast": 12,
+        "slow": 26,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 21,
+        "d": 5,
+        "smooth": 5,
+        "low": 25,
+        "high": 75
+      },
+      "boll": {
+        "n": 30,
+        "k": 2.5
+      }
+    },
+    "enabled": {
+      "ma": false,
+      "rsi": false,
+      "macd": true,
+      "stoch": false,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.4013,
+        "n_trades": 0
+      },
+      "rsi": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.4013,
+        "n_trades": 0
+      },
+      "macd": {
+        "sharpe": 1.903,
+        "ret": 0.2134,
+        "bh": 0.4013,
+        "n_trades": 5
+      },
+      "stoch": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.4013,
+        "n_trades": 0
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.4013,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 1.903,
+      "total_return": 0.2134,
+      "bh_total_return": 0.4013,
+      "max_drawdown": -0.1724,
+      "hit_rate": 0.5,
+      "n_trades": 5,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.765,
+      "skill": true,
+      "proba_up": 0.06,
+      "reason": "edge mesure"
+    },
+    "updated": "2026-09-25"
+  },
+  "S": {
+    "params": {
+      "ma": {
+        "fast": 20,
+        "slow": 50
+      },
+      "rsi": {
+        "n": 7,
+        "low": 35,
+        "high": 65
+      },
+      "macd": {
+        "fast": 19,
+        "slow": 39,
+        "signal": 9
+      },
+      "stoch": {
+        "k": 9,
+        "d": 3,
+        "smooth": 3,
+        "low": 25,
+        "high": 75
+      },
+      "boll": {
+        "n": 20,
+        "k": 2.0
+      }
+    },
+    "enabled": {
+      "ma": true,
+      "rsi": true,
+      "macd": true,
+      "stoch": true,
+      "boll": false
+    },
+    "valid": {
+      "ma": {
+        "sharpe": 3.74,
+        "ret": 0.5293,
+        "bh": 0.8897,
+        "n_trades": 1
+      },
+      "rsi": {
+        "sharpe": 4.493,
+        "ret": 0.4831,
+        "bh": 0.8897,
+        "n_trades": 4
+      },
+      "macd": {
+        "sharpe": 2.157,
+        "ret": 0.3017,
+        "bh": 0.8897,
+        "n_trades": 7
+      },
+      "stoch": {
+        "sharpe": 4.64,
+        "ret": 0.6794,
+        "bh": 0.8897,
+        "n_trades": 4
+      },
+      "boll": {
+        "sharpe": 0.0,
+        "ret": 0.0,
+        "bh": 0.8897,
+        "n_trades": 0
+      }
+    },
+    "composite_valid": {
+      "sharpe": 0.048,
+      "total_return": -0.0019,
+      "bh_total_return": 0.8897,
+      "max_drawdown": -0.0881,
+      "hit_rate": 1.0,
+      "n_trades": 2,
+      "beats_bh": false
+    },
+    "model": {
+      "auc": 0.503,
+      "skill": false,
+      "proba_up": 0.316,
+      "reason": "AUC proche de 0.5 : pas d'edge fiable"
+    },
+    "updated": "2026-09-25"
   }
 }
