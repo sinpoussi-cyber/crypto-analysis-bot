@@ -4,8 +4,10 @@
 #                (CoinGecko), mappees aux paires USDT negociables sur Binance.
 universe:
   mode: top_n              # "list" ou "top_n"
-  top_n: 20                # 20 = sur pour les limites de debit CoinGecko (augmentable avec une cle)
-  exclude_stablecoins: true
+  top_n: 100               # top 100 par capitalisation (recupere dynamiquement)
+  volatile_n: 30           # + les 30 plus volatiles (au-dela du top 100)
+  volatile_pool: 300       # pool ou chercher les volatiles (par capitalisation)
+  exclude_stablecoins: true   # stablecoins exclus : inutiles pour un signal directionnel
 
 # Binance est geo-bloque (HTTP 451) sur GitHub Actions -> on passe direct par CoinGecko.
 # Mettre true seulement en local, dans une region ou Binance n'est pas bloque.
